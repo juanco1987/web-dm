@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'popins', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header{
+    background: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),url(LOGOTIPOS\ DE\ DOORMASTER/LOGO3.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fffDFC;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #fffDFC;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #85cbeb;
+    transform: scale(1.1);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+
+    margin-bottom: 35 px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #C5C5C5;
+    padding: 0 250PX;
+    margin-bottom: 25PX;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 50) 10%, rgba(0, 0, 255, 0));
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu .navbar ul li:hover .submenu {
+    display: block;
+}
+
+.swiper {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(LOGOTIPOS\ DE\ DOORMASTER/LOGO2.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 100px 0;
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    padding: 150px 0 50px 0;
+}
+
+.swiper-slide {
+    width: 450px;
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),url(LOGOTIPOS\ DE\ DOORMASTER/LOGO3.jpeg);
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+    border-radius: 30px;
+    
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icons i {
+    font-size: 20px;
+    color: #1039cc;
+}
+
+.icons img {
+    width: 120px;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between
+}
+
+.product-txt {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.product-txt span {
+    font-size: 25PX;
+    color: #3514c988 ;
+    font-weight: bold;
+}
+
+.product-txt h3
+{
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.product-txt p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.product-img {
+    flex-basis: 50%;
+    text-align: right;
+    background: none;
+}
+
+.product-img img {
+    width: 140px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 55px;
+    border: 1px solid #0b117da4;
+    background-color: #3514c988;
+    border-radius: 25px;
+    color: #FFB900;
+    text-decoration: none;
+    margin-top: 50px;
+}
+
+.btn-1:hover{
+    background-color: #85cbeb;
+}
+
+
+.swiper-slide:hover {
+    background-color: #1e1e1e;
+
+}
+
+.footer{
+    padding: 100px 0 70PX 0;
+    background-color: #000000;
+    text-align: center;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-social h3{
+    font-size: 30px;
+    color: #F9FAFC;
+    margin-bottom: 30px;
+}
+
+.link-social a{
+    font-size: 15px;
+    color: #C5C5C5;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: left;
+}
+
+.link-contact h3{
+    font-size: 30px;
+    color: #F9FAFC;
+    margin-bottom: 30px;
+}
+
+.link-contact a{
+    font-size: 15px;
+    color: #C5C5C5;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.link-social a img {
+    width: 80px;
+    background: none;
+    border-radius: 50%;
+}
+
+.link-social a img:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+
+.link-contact a:hover {
+    color: #85cbeb;
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.link-social ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.link-social li {
+    margin-right: 20px; 
+}
