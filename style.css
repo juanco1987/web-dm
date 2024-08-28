@@ -1,31 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'popins', sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
-.container{
+.container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.header{
-    background: linear-gradient(rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)),url(LOGOTIPOS\ DE\ DOORMASTER/LOGO3.jpeg);
-    background-position: center bottom;
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('LOGOTIPOS DE DOORMASTER/LOGO3.jpeg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
 
 .menu {
@@ -38,11 +52,7 @@ body{
     justify-content: space-between;
 }
 
-.logo {
-    color: #fffDFC;
-    font-size: 25px;
-    font-weight: 800;
-}
+
 
 .menu .navbar ul li {
     position: relative;
@@ -55,6 +65,7 @@ body{
     color: #fffDFC;
     display: block;
     font-weight: 600;
+    transition: color 1s ease, transform 1s ease;
 }
 
 .menu .navbar ul li a:hover {
@@ -75,246 +86,383 @@ body{
     display: none;
 }
 
-.header-content {
-    text-align: center;
-}
-
-.header-content h1{
-    font-size: 75px;
-    line-height: 80px;
-    color: #F9FAFC;
-
-    margin-bottom: 35 px;
-}
-
-.header-content h2{
-    text-align: center;
-}
-
-.header-content p {
-    font-size: 16px;
-    color: #C5C5C5;
-    padding: 0 250PX;
-    margin-bottom: 25PX;
-}
-
 .submenu {
     display: none;
     position: absolute;
-    background-image: linear-gradient(rgba(0, 0, 0, 50) 10%, rgba(0, 0, 255, 0));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 255, 0));
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.submenu li {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation-fill-mode: forwards;
 }
 
 .menu .navbar ul li:hover .submenu {
     display: block;
 }
 
-.btn-1 {
-    display: inline-block;
-    padding: 11px 35px;
-    background-color: #193685;
-    color: #F9FAFC;
-    text-transform: uppercase;
-    border-radius: 30px;
+.menu .navbar ul li:hover .submenu li:nth-child(1) {
+    animation: slideIn 0.5s ease-in-out 0.1s forwards;
 }
 
+.menu .navbar ul li:hover .submenu li:nth-child(2) {
+    animation: slideIn 0.5s ease-in-out 0.3s forwards;
+}
+
+.menu .navbar ul li:hover .submenu li:nth-child(3) {
+    animation: slideIn 0.5s ease-in-out 0.5s forwards;
+}
+
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-content p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #193685;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #85cbeb;
+    transform: translateY(-3px);
+}
+
+.general {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.general-1 {
+    width: 50%;
+    padding: 80px 40px;
+    background: linear-gradient(to right, #000, #0044cc);
+    color: #fff;
+    text-align: center;
+}
+
+.general-1 h2 {
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.general-1 p {
+    font-size: 18px;
+    margin: 20px 0 40px;
+}
+
+.general-2, .general-3, .general-4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    min-height: 400px;
+}
+
+.general-2 {
+    background-image: url('LOGOTIPOS DE DOORMASTER/motor-2.jpg');
+}
+
+.general-3 {
+    background-image: url('LOGOTIPOS DE DOORMASTER/puerta-de-vidrio-2.jpg');
+}
+
+.general-4 {
+    background-image: url('LOGOTIPOS DE DOORMASTER/chap2.jpg');
+}
+
+
+
+
+.swiper {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url(LOGOTIPOS\ DE\ DOORMASTER/LOGO2.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 100px 0;
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    padding: 150px 0 50px 0;
+}
+
+.swiper-slide {
+    width: 450px;
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),url(LOGOTIPOS\ DE\ DOORMASTER/LOGO3.jpeg);
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+    border-radius: 30px;
+    
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icons i {
+    font-size: 20px;
+    color: #1039cc;
+}
+
+.icons img {
+    width: 120px;
+}
+
+.product-content {
+    display: flex;
+    justify-content: space-between
+}
+
+.product-txt {
+    flex-basis: 50%;
+    text-align: left;
+}
+
+.product-txt span {
+    font-size: 25PX;
+    color: #3514c988 ;
+    font-weight: bold;
+}
+
+.product-txt h3
+{
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.product-txt p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.product-img {
+    flex-basis: 50%;
+    text-align: right;
+    background: none;
+}
+
+.product-img img {
+    width: 140px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 55px;
+    border: 1px solid #0b117da4;
+    background-color: #3514c988;
+    border-radius: 25px;
+    color: #FFB900;
+    text-decoration: none;
+    margin-top: 50px;
+}
 
 .btn-1:hover{
     background-color: #85cbeb;
 }
 
 
+.swiper-slide:hover {
+    background-color: #1e1e1e;
 
-.general{
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.titulo p {
+    font-size: 25px;
+}
+
+.fondo{
+    background: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),url(LOGOTIPOS\ DE\ DOORMASTER/LOGO2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.slider-box {
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-box ul {
     display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
 }
 
-.general-1{
-    width: 50%;
-    padding: 100px 250px 100px 100px;
-    background-image: linear-gradient(black 10%, blue);
+.slider-box ul li {
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.general-2{
-    background-image: url(LOGOTIPOS\ DE\ DOORMASTER/motor-2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
+.slider-box ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.general-3{
-    background-image: url(LOGOTIPOS\ DE\ DOORMASTER/puerta-de-vidrio-2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-}
-
-.general-4 {
-    background-image: url(LOGOTIPOS\ DE\ DOORMASTER/chap2.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-}
-
-h2{
-    font-size: 55px;
-    line-height: 70px;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-p{
-    font-size: 16px;
-    color: #ffffff;
-    margin: 25px 0 45px 0;
+.slider-box img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 40px;
 }
 
 
 
-.footer{
-    padding: 100px 0 70PX 0;
-    background-color: #000000;
+.footer {
+    padding: 60px 0;
+    background-color: #000;
+    color: #fff;
     text-align: center;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.link-social h3{
-    font-size: 30px;
-    color: #F9FAFC;
-    margin-bottom: 30px;
-}
-
-.link-social a{
-    font-size: 15px;
-    color: #C5C5C5;
-    display: flex;
+.link-social h3, .link-contact h3 {
+    font-size: 28px;
     margin-bottom: 20px;
-    justify-content: left;
 }
 
-.link-contact h3{
-    font-size: 30px;
-    color: #F9FAFC;
-    margin-bottom: 30px;
+.link-social a, .link-contact a {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.link-contact a{
-    font-size: 15px;
-    color: #C5C5C5;
-    display: flex;
-    margin-bottom: 20px;
-    justify-content: center;
-}
-
-.link-social a img {
-    width: 80px;
-    background: none;
-    border-radius: 50%;
-}
-
-.link-social a img:hover {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
-
-.link-contact a:hover {
+.link-social a:hover, .link-contact a:hover {
     color: #85cbeb;
-    opacity: 0.7;
     transform: scale(1.1);
 }
 
 .link-social ul {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+    gap: 15px;
 }
 
 .link-social li {
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 
+.link-social a img {
+    width: 50px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+.link-social a img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
 
-
-@media(max-width:991px){
-    .menu{
-        padding: 30px;
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
     }
-    .menu label{
-        display: initial;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
-    .menu .navbar{
+}
+
+@keyframes slide {
+    0%, 20% {margin-left:  0;}
+    25%, 45% {margin-left: -20%;}
+}
+
+@media(max-width: 991px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu label {
+        display: block;
+    }
+
+    .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background-color: #323337;
-        display: none
+        display: none;
+        flex-direction: column;
     }
-    .menu .navbar ul li{
+
+    .menu .navbar ul {
+        flex-direction: column;
         width: 100%;
     }
-    #menu:checked ~ .navbar{
-        display: initial;
+
+    #menu:checked ~ .navbar {
+        display: flex;
     }
 
     .header {
-        min-height: 0vh;
+        min-height: 50vh;
+        padding: 30px 0;
     }
 
-    .header-content {
-        padding: 100px 30px;
+    .header-content h1 {
+        font-size: 45px;
+        line-height: 50px;
     }
 
     .header-content p {
-        padding: 0;
-    }
-
-    .coffee {
-        padding: 30px;
-    }
-    
-    .coffe-content h2 {
-        padding: 0;
-    }
-
-    .txt-p {
-        padding: 0;
-    }
-
-    .coffee-group {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    .coffee-img {
-        display: none;
-    }
-
-    .services {
-        padding: 30px;
-    }
-
-    .services-content p {
-        padding: 0;
-    }
-
-    .services-group {
-        flex-direction: column;
-        margin-bottom: 0;
-    }
-
-    .services-1 {
-        margin-bottom: 25px;
+        font-size: 16px;
+        padding: 0 20px;
     }
 
     .general {
@@ -324,38 +472,14 @@ p{
     .general-1 {
         width: 100%;
         padding: 30px;
-        text-align: center;
     }
 
-    .general-2, .general-3 {
-        display: none;
-    }
-
-    .blog {
-        padding: 30px;
-    }
-
-    .blog-content {
-        flex-direction: column;
-    }
-
-    .blog-1 {
-        padding: 0;
-    }
-
-    .footer {
-        padding: 30px;
+    .general-2, .general-3, .general-4 {
+        width: 100%;
+        height: 200px;
     }
 
     .footer-content {
         flex-direction: column;
-        text-align: center;
     }
-
 }
-
-
-
-
-
-
