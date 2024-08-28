@@ -89,7 +89,7 @@ body {
 .submenu {
     display: none;
     position: absolute;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 255, 0));
+    background: linear-gradient(to top, #000, #0044cc);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
@@ -239,7 +239,7 @@ body {
 
 .icons i {
     font-size: 20px;
-    color: #1039cc;
+    color: #f8e74e;
 }
 
 .icons img {
