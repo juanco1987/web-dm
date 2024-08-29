@@ -28,11 +28,42 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 70vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.header-content h1 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-content p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #193685;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #85cbeb;
+    transform: translateY(-3px);
 }
 
 .logo {
@@ -117,36 +148,7 @@ body {
 }
 
 
-.header-content h1 {
-    font-size: 75px;
-    line-height: 80px;
-    color: #fff;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
 
-.header-content p {
-    font-size: 18px;
-    color: #ccc;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-.btn-1 {
-    display: inline-block;
-    padding: 12px 40px;
-    background-color: #193685;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-1:hover {
-    background-color: #85cbeb;
-    transform: translateY(-3px);
-}
 
 .general {
     display: flex;
@@ -394,16 +396,20 @@ body {
     margin-right: 20px;
 }
 
-.link-social a img {
-    width: 50px;
-    border-radius: 50%;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
+
+
+.link-social a i {
+    font-size: 60px; /* Ajusta el tamaño */
+    margin-right: 15px; /* Añade un margen a la derecha */
+    
+  }
 
 .link-social a img:hover {
     opacity: 0.8;
     transform: scale(1.1);
 }
+
+
 
 @keyframes slideIn {
     0% {
