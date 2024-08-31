@@ -51,20 +51,7 @@ body {
     padding: 10px 20px;
 }
 
-.btn-1 {
-    display: inline-block;
-    padding: 12px 40px;
-    background-color: #193685;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-.btn-1:hover {
-    background-color: #85cbeb;
-    transform: translateY(-3px);
-}
 
 .logo {
     color: #fff;
@@ -80,7 +67,7 @@ body {
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;             
 }
 
 
@@ -88,6 +75,11 @@ body {
 .menu .navbar ul li {
     position: relative;
     float: left;
+    background: rgba(246, 240, 240, 0.218);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3), 
+                 inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; 
 }
 
 .menu .navbar ul li a {
@@ -100,7 +92,7 @@ body {
 }
 
 .menu .navbar ul li a:hover {
-    color: #85cbeb;
+    color: #e6e4e47b;
     transform: scale(1.1);
 }
 
@@ -120,9 +112,11 @@ body {
 .submenu {
     display: none;
     position: absolute;
-    background: linear-gradient(to top, #000, #0044cc);
+    background: linear-gradient(to top, #000, #383838);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    text-align: center;
+    
 }
 
 .submenu li {
@@ -157,7 +151,7 @@ body {
 
 .general-1 {
     width: 50%;
-    padding: 80px 40px;
+    padding: 80px 20px;
     background: linear-gradient(to right, #000, #0044cc);
     color: #fff;
     text-align: center;
@@ -180,20 +174,23 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
-    min-height: 400px;
+    min-height: 800px;
 }
 
-.general-2 {
-    background-image: url('LOGOTIPOS DE DOORMASTER/motor-2.jpg');
+.general-2, .general-3, .general-4 {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.general-3 {
-    background-image: url('LOGOTIPOS DE DOORMASTER/puerta-de-vidrio-2.jpg');
+.general-2 img, .general-3 img, .general-4 img {
+    flex: 1;
+    height: 90px 90px;
+    width: 50%;
 }
 
-.general-4 {
-    background-image: url('LOGOTIPOS DE DOORMASTER/chap2.jpg');
-}
+
+
+
 
 
 
@@ -289,16 +286,21 @@ body {
 .btn-1 {
     display: inline-block;
     padding: 13px 55px;
-    border: 1px solid #0b117da4;
-    background-color: #3514c988;
+    border: 1px solid #f6f6f7f0;
+    background: rgba(246, 240, 240, 0.218);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3), 
+                 inset 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     color: #FFB900;
     text-decoration: none;
     margin-top: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-1:hover{
-    background-color: #85cbeb;
+    background-color: #dcdee099;
+    transform: translateY(-3px);
 }
 
 
@@ -373,17 +375,27 @@ body {
 .link-social h3, .link-contact h3 {
     font-size: 28px;
     margin-bottom: 20px;
+    
 }
 
 .link-social a, .link-contact a {
-    font-size: 16px;
+    font-size: 26px;
     color: #ccc;
     margin-bottom: 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 1s ease, transform 1s ease;
+    
 }
 
-.link-social a:hover, .link-contact a:hover {
-    color: #85cbeb;
+.link-social a:hover{ 
+    color: #e6e4e47b;
+    transform: scale(1.1);
+    position: relative;
+    float: left;
+    
+}
+
+.link-contact a:hover {
+    color: #e6e4e47b;
     transform: scale(1.1);
 }
 
@@ -399,15 +411,11 @@ body {
 
 
 .link-social a i {
-    font-size: 60px; /* Ajusta el tamaño */
-    margin-right: 15px; /* Añade un margen a la derecha */
-    
+    font-size: 40px;
+    margin-right: 15px;
   }
 
-.link-social a img:hover {
-    opacity: 0.8;
-    transform: scale(1.1);
-}
+
 
 
 
@@ -427,7 +435,7 @@ body {
     25%, 45% {margin-left: -20%;}
 }
 
-@media(max-width: 991px) {
+@media(max-width: 768px) {
     .menu {
         flex-direction: column;
         align-items: flex-start;
@@ -462,8 +470,10 @@ body {
     }
 
     .header-content h1 {
-        font-size: 45px;
-        line-height: 50px;
+        font-size: 20px;
+        line-height: 5em;
+        padding: 1rem;
+        margin-bottom: 1em;
     }
 
     .header-content p {
@@ -483,6 +493,26 @@ body {
     .general-2, .general-3, .general-4 {
         width: 100%;
         height: 200px;
+    }
+
+    .general-2, .general-3, .general-4 {
+        display: none;
+    }
+
+    .general-1 h2 {
+        font-size: 40px;
+    }
+
+    .general-1 p {
+        font-size: 16px;
+    }
+
+    .titulo {
+        font-size: 22px;
+    }
+
+    .titulo p {
+        font-size: 16px;
     }
 
     .footer-content {
