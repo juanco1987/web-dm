@@ -45,7 +45,7 @@ body {
 
 .header-content p {
     font-size: 18px;
-    color: #ccc;
+    color: #f3e9e9;
     max-width: 800px;
     margin: 0 auto;
     padding: 10px 20px;
@@ -122,7 +122,7 @@ body {
     min-width: 150px;
     max-width: 90vh;
     white-space: nowrap;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .submenu li {
@@ -232,8 +232,20 @@ body {
     padding: 40px;
     text-align: center;
     border-radius: 30px;
+    opacity: 0.5;
+    transform: scale(0.9);
     
 }
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1000);
+    transition: opacity 1000s ease-in-out, transform 1000s ease-in-out;
+  }
+
+  .swiper-slide-inactive {
+    opacity: 0.5;
+    transform: scale(1000);
+  }
 
 .icons {
     display: flex;
@@ -250,6 +262,8 @@ body {
 .icons img {
     width: 120px;
 }
+
+
 
 .product-content {
     display: flex;
@@ -317,52 +331,21 @@ body {
 
 .titulo {
     text-align: center;
-    font-size: 40px;
+    margin: 0 auto;
+    font-size: 25px;
     color: #ffffff;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .titulo p {
-    font-size: 25px;
-}
+    font-size: 18px;
+    color: #eeebeb;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
 
-.fondo{
-    background: linear-gradient(rgba(0,0,0,0.7),
-    rgba(0,0,0,0.7)),url(LOGOTIPOS\ DE\ DOORMASTER/LOGO2.jpeg);
-    background-size: cover;
-    background-position: center center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
-
-.slider-box {
-    width: 1280px;
-    height: auto;
-    margin: 50px auto 0;
-    overflow: hidden;
-}
-
-.slider-box ul {
-    display: flex;
-    padding: 0;
-    width: 400%;
-    animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-box ul li {
-    margin: 0 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.slider-box ul li:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.slider-box img {
-    width: 200px;
-    object-fit: cover;
-    border-radius: 40px;
-}
-
 
 
 .footer {
@@ -421,8 +404,7 @@ body {
     margin-right: 10px;
   }
 
-
-
+  
 
 
 @keyframes slideIn {
@@ -437,8 +419,10 @@ body {
 }
 
 @keyframes slide {
-    0%, 20% {margin-left:  0;}
-    25%, 45% {margin-left: -20%;}
+    0% {margin-left:  0;}
+    0% {margin-right: 0;}
+    100% {margin-left: -300%;}
+    100% {margin-right: -300%;}
 }
 
 @media(max-width: 768px) {
@@ -476,16 +460,20 @@ body {
 
     .submenu {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
         text-align: left;
         padding: 10px;
-        line-height: 0.01emm;
+        line-height: 1.5emm;
+        background-color: #323337;
     }
 
     .header {
         min-height: 50vh;
         padding: 30px 0;
+        background-size: cover;
+        background-position: top center;
     }
+    
 
     .header-content h1 {
         font-size: 20px;

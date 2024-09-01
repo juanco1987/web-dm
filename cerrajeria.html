@@ -15,32 +15,38 @@
 
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo">DOOORMASTER</a>
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="LOGOTIPOS DE DOORMASTER/menu.png" class="menu-icono" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li><a href="#"><i class="fas fa-cogs"></i> Servicios</a>
-                        <ul class="submenu">
-                            <li><a href="mantenimientos.html">MANTENIMIENTOS PUERTAS DE VIDRIO</a></li>
-                            <li><a href="automatismos.html">AUTOMATISMOS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
+          <a href="#" class="logo">DOOORMASTER</a>
+          <input type="checkbox" id="menu" />
+          <label for="menu">
+            <img src="LOGOTIPOS DE DOORMASTER/menu.png" class="menu-icono" alt="">
+          </label>
+          <nav class="navbar">
+            <ul>
+              <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+              <li><a href="#"><i class="fas fa-cogs"></i> Servicios</a>
+                <ul class="submenu">
+                  <li><a href="mantenimientos.html">MANTENIMIENTOS PUERTAS DE VIDRIO</a></li>
+                  <li><a href="automatismos.html">AUTOMATISMOS</a></li>
+                  <li><a href="cerrajeria.html">CERRAJERIA</a></li>
                 </ul>
-            </nav>
+              </li>
+              <li><a href="contacto.html"><i class="fas fa-user"></i> Contacto</a>
+                <ul class="submenu"> <li><a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%2que%2nos%2visites%20en%2que%20podemos%2ayudarte"><i class="fab fa-whatsapp"></i> WhatsApp</a></li></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> 3106947033</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> doormasterjo@gmail.com</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         <div class="header-content container">
-            <h1>CERRAJERIA</h1>
+            <h1>Cerrajería integral: tu solución completa para la seguridad del hogar</h1>
             <p>
-                contamos con servico a domicilio en toda la ciudad de bogota cambio de guardas y aperturas de
-                toda clase de cerrduras venta e instalación de cerraduras inteligentes, seguridad y sencillas
+                Aperturas de emergencia, instalación de cerraduras inteligentes, venta de cerraduras de alta seguridad y mucho más. 
+                ¡Contamos con el servicio que necesitas!
             </p>
-            <a href="#" class="btn-1"><i class="fas fa-motorcycle"></i> Solicita un técnico ahora</a>
+            <a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%2que%2nos%2visites%20en%2que%20podemos%2ayudarte" class="btn-1"><i class="fas fa-motorcycle"></i> Solicita un técnico ahora</a>
         </div>
     </header>
 
@@ -72,7 +78,7 @@
                 <div class="icons">
                     <i class="fa-solid fa-circle-arrow-left"></i>
                     <img src="images/logo.png" alt="">
-                    <i class="fa-solid fa-circle-arrow-rigth"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
                 </div>
                 <div class="product-content">
                     <div class="product-txt">
@@ -92,7 +98,7 @@
                 <div class="icons">
                     <i class="fa-solid fa-circle-arrow-left"></i>
                     <img src="images/logo.png" alt="">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
                 </div>
                 <div class="product-content">
                     <div class="product-txt">
@@ -113,7 +119,7 @@
                 <div class="icons">
                     <i class="fa-solid fa-circle-arrow-left"></i>
                     <img src="images/logo.png" alt="">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
                 </div>
                 <div class="product-content">
                     <div class="product-txt">
@@ -134,7 +140,7 @@
                 <div class="icons">
                     <i class="fa-solid fa-circle-arrow-left"></i>
                     <img src="images/logo.png" alt="">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
                 </div>
                 <div class="product-content">
                     <div class="product-txt">
@@ -155,7 +161,7 @@
                 <div class="icons">
                     <i class="fa-solid fa-circle-arrow-left"></i>
                     <img src="images/logo.png" alt="">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
                 </div>
                 <div class="product-content">
                     <div class="product-txt">
@@ -175,7 +181,7 @@
                 <div class="icons">
                     <i class="fa-solid fa-circle-arrow-left"></i>
                     <img src="images/logo.png" alt="">
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
                 </div>
                 <div class="product-content">
                     <div class="product-txt">
@@ -233,9 +239,32 @@
                 modifer: 1,
                 slidesShadwos: true,
                 rotate: 0,
-                stretch: 0
+                stretch: 0,
+                effect: "slide",
+                speed: 10000, 
+                spaceBetween: 30,
+                autoplay: {
+                  delay: 10,
+                  disableOnInteraction: false,
+                }
             }
+
+            
         })
+        const time = 5000; 
+        let currentSlide = 0;
+
+        function changeSlide() {
+        swiper.slideTo(currentSlide);
+        currentSlide++;
+        if (currentSlide === swiper.slides.length) {
+        currentSlide = 0;
+        }
+        setTimeout(changeSlide, time);
+        }
+
+        setTimeout(changeSlide, time);
+        
     </script>
     
 </body>
