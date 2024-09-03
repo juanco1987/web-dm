@@ -61,29 +61,7 @@ body {
     position: relative;
   }
   
-  .logo:hover {
-    background-clip: text;
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    background-image: linear-gradient(to right, #8948ebd5, #786aa7b3, #fff);
-  }
-  
-  .logo::after {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(to right, #8241e266, #47415f6d);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .logo:hover::after {
-    opacity: 1;
-  }
-
+ 
 .menu {
     position: absolute;
     top: 0;
@@ -94,16 +72,6 @@ body {
     justify-content: space-between;             
 }
 
-/* Estado cuando el menú está abierto en dispositivos móviles */
-.menu.menu-open {
-    display: flex;
-    /* Otros estilos para mostrar el menú */
-}
-
-/* Añadir una clase para el cuerpo para manejar el estado del menú */
-body.menu-open {
-    overflow: hidden; /* Opcional: evitar el desplazamiento del fondo cuando el menú está abierto */
-}
 
 
 .menu .navbar ul li {

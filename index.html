@@ -174,62 +174,6 @@
 <script>
   const yearElement = document.getElementById('year');
   yearElement.textContent = new Date().getFullYear();
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.querySelector('.menu-icono');
-    const menu = document.querySelector('.menu');
-    const submenuItems = document.querySelectorAll('.menu .navbar ul li');
-    
-    // Abre o cierra el menú al hacer clic en el icono
-    menuIcon.addEventListener('click', function() {
-        menu.classList.toggle('menu-open');
-        document.body.classList.toggle('menu-open');
-    });
-
-    // Maneja el clic en una opción del menú para dispositivos móviles
-    submenuItems.forEach(item => {
-        const submenu = item.querySelector('.submenu');
-
-        if (submenu) {
-            item.addEventListener('click', function(e) {
-                e.stopPropagation();
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            });
-        }
-    });
-
-    // Maneja el hover del menú para PC
-    if (window.matchMedia("(min-width: 769px)").matches) {
-        submenuItems.forEach(item => {
-            const submenu = item.querySelector('.submenu');
-
-            if (submenu) {
-                item.addEventListener('mouseenter', function() {
-                    submenu.style.display = 'block';
-                });
-
-                item.addEventListener('mouseleave', function() {
-                    submenu.style.display = 'none';
-                });
-            }
-        });
-    }
-
-    // Cierra el menú y el submenu cuando se navega hacia atrás en móviles
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            // Si la página está siendo recuperada desde la caché, cierra el menú y el submenu
-            menu.classList.remove('menu-open');
-            document.body.classList.remove('menu-open');
-            submenuItems.forEach(item => {
-                const submenu = item.querySelector('.submenu');
-                if (submenu) {
-                    submenu.style.display = 'none';
-                }
-            });
-        }
-    });
-});
-
 </script>
 
 </body>

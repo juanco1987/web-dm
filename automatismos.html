@@ -154,17 +154,19 @@
             </div>
         </div>
         <div class="copyright">
-            &copy; <?php echo date("Y"); ?> Doormaster. Todos los derechos reservados.
+            &copy; <span id="year"></span> Doormaster. Todos los derechos reservados.
           </div>
     </footer>
      
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
+        const yearElement = document.getElementById('year');
+        yearElement.textContent = new Date().getFullYear();
         const slides = document.querySelectorAll('.swiper-slide');
 
-for (let i = 0; i < slides.length; i++) {
-  slides[i].style.animationDelay = `${i * 0.2}s`;
-}
+        for (let i = 0; i < slides.length; i++) {
+        slides[i].style.animationDelay = `${i * 0.2}s`;
+        }
 
         var swiper3 = new Swiper(".mySwiper3",{
             effect: "coverflow",

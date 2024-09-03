@@ -219,7 +219,7 @@
             </div>
         </div>
         <div class="copyright">
-            &copy; <?php echo date("Y"); ?> Doormaster. Todos los derechos reservados.
+            &copy; <span id="year"></span> Doormaster. Todos los derechos reservados.
           </div>
     </footer>
 
@@ -227,6 +227,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
+        const yearElement = document.getElementById('year');
+        yearElement.textContent = new Date().getFullYear();
+        
         var swiper = new Swiper(".mySwiper",{
             effect: "coverflow",
             grabCursor: true,
