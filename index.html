@@ -36,7 +36,7 @@
                 </ul>
               </li>
               <li><a href="#"><i class="fas fa-user"></i> Contacto</a>
-                <ul class="submenu"> <li><a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%2que%2nos%2visites%20en%2que%20podemos%2ayudarte"><i class="fab fa-whatsapp"></i> WhatsApp</a></li></li>
+                <ul class="submenu"> <li><a href="https://wa.me/+573106947033"><i class="fab fa-whatsapp"></i> WhatsApp</a></li></li>
                     <li><a href="#"><i class="fas fa-phone"></i> 3106947033</a></li>
                     <li><a href="#"><i class="fas fa-envelope"></i> doormasterjo@gmail.com</a></li>
                 </ul>
@@ -52,7 +52,7 @@
                 Experimenta la tranquilidad que brindan nuestras puertas automáticas, cerrajería de alta calidad y mantenimientos preventivos. <br>
                 ¡Aumenta la seguridad de tu propiedad hoy mismo!
             </p>
-            <a href="#" class="btn-1"><i class="fas fa-file-alt" ></i> Solicita tu cotización</a>
+            <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-file-alt" ></i> Solicita tu cotización</a>
         </div>
     </header>
 
@@ -78,7 +78,7 @@
                 <br>
                 ¡Solicita tu cotización ahora!
             </p>
-            <a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%2que%2nos%2visites%20en%2que%20podemos%2ayudarte" class="btn-1"><i class="fas fa-search"></i> Solicitar revisión</a>
+            <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-search"></i> Solicitar revisión</a>
         </div>
         <div class="general-2">
             <img src="LOGOTIPOS DE DOORMASTER/motor-2.jpg" alt="Imagen 1">
@@ -111,7 +111,7 @@
                 <br>
                 <strong>¡Prolonga la vida útil de tus puertas y mejora su estética!</strong>
                 <br>
-                <a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%2que%2nos%2visites%20en%2que%20podemos%2ayudarte" class="btn-1"><i class="fas fa-file-alt"></i> Solicita tu cotización ahora</a>
+                <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-file-alt"></i> Solicita tu cotización ahora</a>
             </p>
         </div>
     </section>
@@ -132,15 +132,14 @@
                 <br>
                 <strong>¡Tu seguridad es nuestra prioridad!</strong>
                 <br>
-                <a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%2que%2nos%2visites%20en%2que%20podemos%2ayudarte" class="btn-1"><i class="fas fa-motorcycle"></i> Solicita un técnico ahora</a>
-
+                <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-motorcycle"></i> Solicita un técnico ahora</a>
             </p>
         </div>
         <div class="general-4">
-            <img src="LOGOTIPOS DE DOORMASTER/motor-2.jpg" alt="Imagen 1">
-            <img src="LOGOTIPOS DE DOORMASTER/brazos-elect.jpg" alt="Imagen 2">
-            <img src="LOGOTIPOS DE DOORMASTER/motor-corre.jpg" alt="motor-corre.jpg">
-            <img src="LOGOTIPOS DE DOORMASTER/mmotor-levad.jpg" alt="mmotor-levad.jpg">
+            <img src="LOGOTIPOS DE DOORMASTER/cerradura-2.jpeg" alt="Imagen 1">
+            <img src="LOGOTIPOS DE DOORMASTER/cerradura.png" alt="Imagen 2">
+            <img src="LOGOTIPOS DE DOORMASTER/chap1.jpg" alt="motor-corre.jpg">
+            <img src="LOGOTIPOS DE DOORMASTER/chap2.jpg" alt="mmotor-levad.jpg">
         </div>
     </section>
 
@@ -153,7 +152,7 @@
                 <ul>
                     <li><a href="https://www.facebook.com/profile.php?id=61560715505199&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i> Facebook</a></li>
                     <li><a href="https://www.instagram.com/doormasterjo"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://wa.me/+573106947033?text=Hola%20es%20un%20gusto%20que%20nos%20visites%20en%20que%20podemos%20ayudarte"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://wa.me/+573106947033"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                 </ul>
                 </ul>
             </div>
@@ -167,12 +166,71 @@
             </div>
         </div>
         <div class="copyright">
-            &copy; <?php echo date("y"); ?> Doormaster. Todos los derechos reservados.
-          </div>
+            &copy; <span id="year"></span> Doormaster. Todos los derechos reservados.
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="script.js" ></script>
+<script>
+  const yearElement = document.getElementById('year');
+  yearElement.textContent = new Date().getFullYear();
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icono');
+    const menu = document.querySelector('.menu');
+    const submenuItems = document.querySelectorAll('.menu .navbar ul li');
+    
+    // Abre o cierra el menú al hacer clic en el icono
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('menu-open');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Maneja el clic en una opción del menú para dispositivos móviles
+    submenuItems.forEach(item => {
+        const submenu = item.querySelector('.submenu');
+
+        if (submenu) {
+            item.addEventListener('click', function(e) {
+                e.stopPropagation();
+                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+            });
+        }
+    });
+
+    // Maneja el hover del menú para PC
+    if (window.matchMedia("(min-width: 769px)").matches) {
+        submenuItems.forEach(item => {
+            const submenu = item.querySelector('.submenu');
+
+            if (submenu) {
+                item.addEventListener('mouseenter', function() {
+                    submenu.style.display = 'block';
+                });
+
+                item.addEventListener('mouseleave', function() {
+                    submenu.style.display = 'none';
+                });
+            }
+        });
+    }
+
+    // Cierra el menú y el submenu cuando se navega hacia atrás en móviles
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            // Si la página está siendo recuperada desde la caché, cierra el menú y el submenu
+            menu.classList.remove('menu-open');
+            document.body.classList.remove('menu-open');
+            submenuItems.forEach(item => {
+                const submenu = item.querySelector('.submenu');
+                if (submenu) {
+                    submenu.style.display = 'none';
+                }
+            });
+        }
+    });
+});
+
+</script>
 
 </body>
 
