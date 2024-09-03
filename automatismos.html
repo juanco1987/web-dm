@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <div class="menu container">
-          <a href="#" class="logo">DOOORMASTER</a>
+          <a href="#" class="logo">DOORMASTER</a>
           <input type="checkbox" id="menu" />
           <label for="menu">
             <img src="LOGOTIPOS DE DOORMASTER/menu.png" class="menu-icono" alt="">
@@ -161,6 +161,12 @@
      
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
+        const slides = document.querySelectorAll('.swiper-slide');
+
+for (let i = 0; i < slides.length; i++) {
+  slides[i].style.animationDelay = `${i * 0.2}s`;
+}
+
         var swiper3 = new Swiper(".mySwiper3",{
             effect: "coverflow",
             grabCursor: true,
