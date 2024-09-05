@@ -228,8 +228,7 @@ body {
     border-radius: 30px;
     opacity: 0.5;
     transform: scale(0.9);
-    z-index: 1500;
-    
+   
  }
 
 .swiper-slide-active {
@@ -243,16 +242,13 @@ body {
     transform: scale(1);
   }
 
-.swiper-slide:hover {
-    background-color: #1e1e1e;
-
-}
 
 .icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+    z-index: 1;
 }
 
 .icons i {
@@ -300,23 +296,67 @@ body {
 .btn-1 {
     display: inline-block;
     padding: 13px 55px;
-    border: 1px solid #f6f6f7f0;
+    border: 0.1rem solid #00fff2;
     background: rgba(246, 240, 240, 0.218);
     backdrop-filter: blur(5px);
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3), 
                  inset 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    color: #FFB900;
+    color: #00FFAA;
     text-decoration: none;
     margin-top: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 100;
+    transition: background-color 0.7s ease, transform 0.7s ease;
+    z-index: 2;
+    overflow: none;
+    position: relative;
 }
+
+.btn-1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(0, 34, 85), rgb(0, 82, 130), rgb(15, 170, 170), rgb(35, 100, 210));
+    background-size: 300%;
+    border-radius: 25px;
+    transition: all 0.9s ease-in;
+    z-index: -1;
+}
+
+.btn-1:hover::after {
+    background-position: 100%;
+    filter: blur(25px);
+}
+
+.btn-1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(14, 36, 85), rgb(21, 82, 192), rgb(54, 144, 255), rgb(18, 110, 207));
+    border-radius: 25px;
+    transition: all 0.9s ease-out;
+    background-size: 300%;
+    z-index: -1;
+}
+
+.btn-1:hover::before {
+    background-position: 100%;
+    filter: blur(25px);
+}
+
+
 
 .btn-1:hover{
     background-color: #dcdee099;
     transform: translateY(-3px);
 }
+
+
 
 .titulo {
     text-align: center;
@@ -366,15 +406,26 @@ body {
 }
 
 .link-social a:hover{ 
-    color: #e6e4e47b;
     transform: scale(1.1);
     position: relative;
     float: left;
     
 }
 
+.link-social a.facebook:hover {
+    color: #3b5998; 
+}
+
+.link-social a.instagram:hover {
+    color: #e1306c; /* Instagram - rosa */
+}
+
+.link-social a.whatsapp:hover {
+    color: #25d366; /* WhatsApp - verde */
+}
+
 .link-contact a:hover {
-    color: #e6e4e47b;
+    color: #16bae3c0;
     transform: scale(1.1);
 }
 
