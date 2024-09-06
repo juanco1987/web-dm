@@ -27,7 +27,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('LOGOTIPOS DE DOORMASTER/LOGO3.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 90vh;
     display: flex;
     align-items: center;
