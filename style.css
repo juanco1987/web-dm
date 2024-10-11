@@ -9,6 +9,10 @@
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #333;
@@ -36,15 +40,15 @@ body {
 }
 
 .header-content h1 {
-    font-size: 55px;
-    line-height: 70px;
+    font-size: 5.5rem;
+    line-height: 7rem;
     color: #fff;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .header-content p {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #f3e9e9;
     max-width: 800px;
     margin: 0 auto;
@@ -55,7 +59,7 @@ body {
 
 .logo {
     color: #fff;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 800;
     letter-spacing: 1px;
     position: relative;
@@ -87,7 +91,7 @@ body {
 }
 
 .menu .navbar ul li a {
-    font-size: 18px;
+    font-size: 1.8rem;
     padding: 10px;
     color: #fffDFC;
     display: block;
@@ -105,7 +109,7 @@ body {
 }
 
 .menu-icono {
-    width: 25px;
+    width: 2.5rem;
 }
 
 .menu label {
@@ -118,11 +122,11 @@ body {
     position: absolute;
     background: linear-gradient(to top, #000, #383838);
     box-shadow: 0px 2px 1000px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1rem;
     width: auto;
-    min-width: 220px;
+    min-width: 22rem;
     max-width: 90vh;
     white-space: nowrap;
     
@@ -130,7 +134,7 @@ body {
 
 .submenu li {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-1rem);
     animation-fill-mode: forwards;
 }
 
@@ -155,13 +159,13 @@ body {
 }
 
 .services-section {
-    padding: 50px 0;
+    padding: 5rem 0;
     text-align: center;
     background-color: #130606;
   }
 
   .services-section h2 {
-    font-size: 40px;
+    font-size: 5rem;
   }
   
   .services-container {
@@ -175,49 +179,51 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 400px;
-    margin: 50px;
+    max-width: 50rem;
+    margin: 1rem;
     text-align: center;
     background: linear-gradient(to bottom right, #0407bc, #002BFF, #010f4e);
   }
   
   .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.2);
   }
   
   .service-card img {
     max-width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 1rem 1rem 0 0;
   }
   
   .service-card h3 {
-    margin: 15px 0;
-    font-size: 25px;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
   }
   
   .service-card p {
-    padding: 0 15px;
+    padding: 0 1.5rem;
     color: #f2eded;
-    font-size: 20px;
+    font-size: 2rem;
+  }
+
+  .service-card  ul {
+    font-size: 1.5rem;
   }
   
   .service-card .btn-1 {
-    font-size: 16px;
+    font-size: 2rem;
   }
 
   .services-section {
     padding: 50px 0;
     text-align: center;
-    background-image: url('LOGOTIPOS\ DE\ DOORMASTER/LOGO4.jpeg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #050522, #002BFF, #010f4e);
     color: rgb(250, 247, 247);
   }
   
   .service-card img {
     transition: transform 0.6s ease, opacity 0.3s ease;
-    height: 500px;
+    height: 40rem;
   }
   
   .service-card:hover img {
@@ -244,12 +250,12 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        padding: 100px 0;
+        padding: 10rem 0;
 }
 
 .swiper {
     width: 100%;
-    padding: 150px 0 50px 0;
+    padding: 15rem 0 5rem 0;
 }
 
 .swiper-slide {
