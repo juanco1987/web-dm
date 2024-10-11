@@ -154,49 +154,86 @@ body {
     animation: slideIn 0.5s ease-in-out 0.7s forwards;
 }
 
-.general {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.general-1 {
-    width: 50%;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #000, #0044cc);
-    color: #fff;
+.services-section {
+    padding: 50px 0;
     text-align: center;
-}
+    background-color: #130606;
+  }
 
-.general-1 h2 {
-    font-size: 55px;
-    line-height: 70px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.general-1 p {
-    font-size: 18px;
-    margin: 20px 0 40px;
-}
-
-.general-2, .general-3, .general-4 {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    min-height: 800px;
-}
-
-.general-2, .general-3, .general-4 {
+  .services-section h2 {
+    font-size: 40px;
+  }
+  
+  .services-container {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-}
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 500px;
+    margin: 50px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #0407bc, #002BFF, #010f4e);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .service-card h3 {
+    margin: 15px 0;
+    font-size: 25px;
+  }
+  
+  .service-card p {
+    padding: 0 15px;
+    color: #f2eded;
+    font-size: 20px;
+  }
+  
+  .service-card .btn-1 {
+    font-size: 16px;
+  }
 
-.general-2 img, .general-3 img, .general-4 img {
-    flex: 1;
-    height: 90px 90px;
-    width: 50%;
-}
+  .services-section {
+    padding: 50px 0;
+    text-align: center;
+    background-image: url('LOGOTIPOS\ DE\ DOORMASTER/LOGO4.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(250, 247, 247);
+  }
+  
+  .service-card img {
+    transition: transform 0.6s ease, opacity 0.3s ease;
+    height: 500px;
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .service-card i {
+    color: #007BFF;
+    transition: color 0.6s ease;
+  }
+  
+  .service-card:hover i {
+    color: #ec2f4b;
+    transition: color 0.6s ease;
+  }
 
 .swiper {
     background-image: linear-gradient(
@@ -443,13 +480,31 @@ body {
     margin-right: 10px;
   }
 
+  .header .logo {
+    animation: fade-in 1.5s ease-in-out;
+  }
   
+  .header .navbar {
+    animation: fade-in 1.5s ease-in-out;
+  }
+
+  .header-content {
+    animation: fade-in 3s ease-in-out;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translateY(-15px);
     }
     100% {
         opacity: 1;
