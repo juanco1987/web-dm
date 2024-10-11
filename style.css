@@ -172,6 +172,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 0.1rem;
   }
   
   .service-card {
@@ -179,7 +180,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 37rem;
+    max-width: 40rem;
     margin: 1rem;
     text-align: center;
     background: linear-gradient(to bottom right, #0407bc, #002BFF, #010f4e);
