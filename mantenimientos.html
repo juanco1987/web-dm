@@ -145,46 +145,53 @@
         yearElement.textContent = new Date().getFullYear();
         
         var swiper1 = new Swiper(".mySwiper1", {
-            effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: "auto",
-            loopFillGroupWithBlank: true,
-            coverflowEffect: {
-                depth: 500,
-                modifer: 1,
-                slidesShadwos: true,
-                rotate: 30,
-                stretch: 50,
-                effect: "slide",
-                spaceBetween: 30,
-            },
+            slidesPerView: 3, 
+            spaceBetween: 30, 
+            loop: false, 
             autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
+                delay: 4000, 
+                disableOnInteraction: true,
             },
+            speed: 1200, 
+            breakpoints: {
+                768: {
+                    slidesPerView: 2, 
+                },
+                1024: {
+                    slidesPerView: 3, 
+                },
+                1400: {
+                    slidesPerView: 4, 
+                }
+            }
         });
         
         var swiper2 = new Swiper(".mySwiper2", {
-            effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: "auto",
-            loopFillGroupWithBlank: true,
-            coverflowEffect: {
-                depth: 500,
-                modifer: 1,
-                slidesShadwos: true,
-                rotate: 30,
-                stretch: 50,
-                effect: "slide",
-                spaceBetween: 30,
-            },
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: false,
             autoplay: {
-                delay: 5000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
+            speed: 1200,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1400: {
+                    slidesPerView: 4,
+                }
+            }
         });
+        
         
         let forward = true; 
 

@@ -178,7 +178,7 @@ body {
 .service-card {
     background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 6px 25px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: 40rem;
     margin: 1rem;
@@ -188,7 +188,7 @@ body {
   
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15), 0 8px 30px rgba(0, 0, 0, 0.1);
 }
   
 .service-card img {
@@ -251,7 +251,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        padding: 10rem 0;
+        padding: 8rem 0;
 }
 
 .swiper {
@@ -270,6 +270,7 @@ body {
     padding: 40px;
     text-align: center;
     border-radius: 30px;
+    transition: transform 0.8s ease, opacity 0.8s ease;
     opacity: 0.5;
     transform: scale(0.9);
    
@@ -278,7 +279,7 @@ body {
 .swiper-slide-active {
     opacity: 1;
     transform: scale(1);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    
 }
 
 .swiper-slide-inactive {
@@ -333,7 +334,7 @@ body {
 }
 
 .product-img img {
-    width: 140px;
+    width: 14rem;
 }
 
 .btn-1 {
@@ -402,7 +403,9 @@ body {
 
 .btn-1:hover{
     background-color: #dcdee099;
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    
 }
 
 
@@ -651,4 +654,18 @@ body {
         font-size: 1.8rem;
     }
 
+}
+
+@media(min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .header h1 {
+        font-size: 7rem;
+    }
+
+    .service-card {
+        max-width: 45rem;
+    }
 }

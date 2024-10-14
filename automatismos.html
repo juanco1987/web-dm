@@ -164,114 +164,121 @@
     <script>
         const yearElement = document.getElementById('year');
         yearElement.textContent = new Date().getFullYear();
+    
+        // Animación escalonada para las diapositivas
         const slides = document.querySelectorAll('.swiper-slide');
-
         for (let i = 0; i < slides.length; i++) {
-        slides[i].style.animationDelay = `${i * 0.2}s`;
+            slides[i].style.animationDelay = `${i * 0.2}s`;
         }
-
-        var swiper3 = new Swiper(".mySwiper3",{
-            effect: "coverflow",
+    
+        // Configuración Swiper3
+        var swiper3 = new Swiper(".mySwiper3", {
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: "auto",
-            loopFillGroupWithBlank: true,
-            coverflowEffect: {
-                depth: 500,
-                modifer: 1,
-                slidesShadwos: true,
-                rotate: 30,
-                stretch: 50,
-                effect: "slide",
-                speed: 10000, 
-                spaceBetween: 30,
-                autoplay: {
-                  delay: 2000,
-                  disableOnInteraction: false,
+            slidesPerView: 3, 
+            spaceBetween: 30,
+            loop: false, 
+            autoplay: {
+                delay: 4000, 
+                disableOnInteraction: false,
+            },
+            speed: 1200, 
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3 
+                },
+                768: {
+                    slidesPerView: 2 
+                },
+                480: {
+                    slidesPerView: 1 
                 }
             }
-
-            
-        })
-        var swiper4 = new Swiper(".mySwiper4",{
-            effect: "coverflow",
+        });
+    
+        // Configuración Swiper4
+        var swiper4 = new Swiper(".mySwiper4", {
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: "auto",
-            loopFillGroupWithBlank: true,
-            coverflowEffect: {
-                depth: 500,
-                modifer: 1,
-                slidesShadwos: true,
-                rotate: 30,
-                stretch: 50,
-                effect: "slide",
-                speed: 10000, 
-                spaceBetween: 30,
-                autoplay: {
-                  delay: 10,
-                  disableOnInteraction: false,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: false,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            speed: 1200,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                480: {
+                    slidesPerView: 1
                 }
             }
-
-            
-        })
-        var swiper5 = new Swiper(".mySwiper5",{
-            effect: "coverflow",
+        });
+    
+        // Configuración Swiper5
+        var swiper5 = new Swiper(".mySwiper5", {
             grabCursor: true,
             centeredSlides: true,
-            slidesPerView: "auto",
-            loopFillGroupWithBlank: true,
-            coverflowEffect: {
-                depth: 500,
-                modifer: 1,
-                slidesShadwos: true,
-                rotate: 30,
-                stretch: 50,
-                effect: "slide",
-                speed: 10000, 
-                spaceBetween: 30,
-                autoplay: {
-                  delay: 10,
-                  disableOnInteraction: false,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: false,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            speed: 1200,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                480: {
+                    slidesPerView: 1
                 }
             }
-
-            
-        })
-        let forward = true; 
-
-function changeSlide(swiper, time) {
-    let currentSlide = 0;
-
-    function goToNextSlide() {
-        if (forward) {
-            swiper.slideTo(currentSlide);
-            currentSlide++;
-            if (currentSlide === swiper.slides.length) {
-                forward = false;
-                currentSlide -= 2; 
+        });
+    
+        // Función para cambiar de diapositiva
+        function changeSlide(swiper, time) {
+            let currentSlide = 0;
+            let forward = true;
+    
+            function goToNextSlide() {
+                if (forward) {
+                    swiper.slideTo(currentSlide);
+                    currentSlide++;
+                    if (currentSlide === swiper.slides.length) {
+                        forward = false;
+                        currentSlide -= 2;
+                    }
+                } else {
+                    swiper.slideTo(currentSlide);
+                    currentSlide--;
+                    if (currentSlide < 0) {
+                        forward = true;
+                        currentSlide = 1;
+                    }
+                }
+                setTimeout(goToNextSlide, time);
             }
-        } else {
-            swiper.slideTo(currentSlide);
-            currentSlide--;
-            if (currentSlide < 0) {
-                forward = true;
-                currentSlide = 1; 
-            }
+    
+            setTimeout(goToNextSlide, time);
         }
-        setTimeout(goToNextSlide, time);
-    }
-
-    setTimeout(goToNextSlide, time);
-}
-        
+    
         const time = 5000; 
         changeSlide(swiper3, time);
         changeSlide(swiper4, time);
         changeSlide(swiper5, time);
-        
     </script>
+    
 
 
 </body>
