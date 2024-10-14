@@ -48,11 +48,11 @@ body {
 }
 
 .header-content p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #f3e9e9;
-    max-width: 800px;
+    max-width: 80rem;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
 }
 
 
@@ -61,9 +61,9 @@ body {
     color: #fff;
     font-size: 3rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
     position: relative;
-  }
+}
   
  
 .menu {
@@ -162,85 +162,85 @@ body {
     padding: 5rem 0;
     text-align: center;
     background-color: #130606;
-  }
+}
 
-  .services-section h2 {
+.services-section h2 {
     font-size: 5rem;
-  }
+}
   
-  .services-container {
+.services-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 0.1rem;
-  }
+}
   
-  .service-card {
+.service-card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: 40rem;
     margin: 1rem;
     text-align: center;
     background: linear-gradient(to bottom right, #0407bc, #002BFF, #010f4e);
-  }
+}
   
-  .service-card:hover {
+.service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.2);
-  }
+}
   
-  .service-card img {
+.service-card img {
     max-width: 100%;
     border-radius: 1rem 1rem 0 0;
-  }
+}
   
-  .service-card h3 {
+.service-card h3 {
     margin: 0.5rem 0;
     font-size: 2.5rem;
-  }
+}
   
-  .service-card p {
+.service-card p {
     padding: 0 1.5rem;
     color: #f2eded;
     font-size: 2rem;
-  }
+}
 
-  .service-card  ul {
+.service-card  ul {
     font-size: 1.5rem;
-  }
+}
   
-  .service-card .btn-1 {
+.service-card .btn-1 {
     font-size: 1.5rem;
-  }
+}
 
-  .services-section {
+.services-section {
     padding: 50px 0;
     text-align: center;
     background: linear-gradient(135deg, #050522, #002BFF, #010f4e);
     color: rgb(250, 247, 247);
-  }
+}
   
-  .service-card img {
+.service-card img {
     transition: transform 0.6s ease, opacity 0.3s ease;
     height: 40rem;
-  }
+}
   
-  .service-card:hover img {
+.service-card:hover img {
     transform: scale(1.05);
     opacity: 0.9;
-  }
+}
   
-  .service-card i {
+.service-card i {
     color: #007BFF;
     transition: color 0.6s ease;
-  }
+}
   
-  .service-card:hover i {
+.service-card:hover i {
     color: #ec2f4b;
     transition: color 0.6s ease;
-  }
+}
 
 .swiper {
     background-image: linear-gradient(
@@ -273,18 +273,18 @@ body {
     opacity: 0.5;
     transform: scale(0.9);
    
- }
+}
 
 .swiper-slide-active {
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  }
+}
 
 .swiper-slide-inactive {
     opacity: 0.5;
     transform: scale(1);
-  }
+}
 
 
 .icons {
@@ -336,6 +336,11 @@ body {
     width: 140px;
 }
 
+.btn-1 {
+    padding: 1rem 3rem;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+}
 
 .btn-1 {
     display: inline-block;
@@ -348,7 +353,7 @@ body {
     border-radius: 25px;
     color: #00FFAA;
     text-decoration: none;
-    margin-top: 50px;
+    margin-top: 5rem;
     transition: background-color 0.7s ease, transform 0.7s ease;
     z-index: 2;
     overflow: none;
@@ -485,27 +490,28 @@ body {
 .link-social a i {
     font-size: 35px;
     margin-right: 10px;
-  }
+}
 
-  .header .logo {
+.header .logo {
     animation: fade-in 1.5s ease-in-out;
-  }
+}
   
-  .header .navbar {
+.header .navbar {
     animation: fade-in 1.5s ease-in-out;
-  }
+}
 
-  .header-content {
+.header-content {
     animation: fade-in 3s ease-in-out;
-  }
-  @keyframes fade-in {
+}
+  
+@keyframes fade-in {
     from {
       opacity: 0;
     }
     to {
       opacity: 1;
     }
-  }
+}
 
 
 @keyframes slideIn {
@@ -583,32 +589,6 @@ body {
         padding: 0 20px;
     }
 
-    .general {
-        flex-direction: column;
-    }
-
-    .general-1 {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .general-2, .general-3, .general-4 {
-        width: 100%;
-        height: 200px;
-    }
-
-    .general-2, .general-3, .general-4 {
-        display: none;
-    }
-
-    .general-1 h2 {
-        font-size: 40px;
-    }
-
-    .general-1 p {
-        font-size: 16px;
-    }
-
     .titulo {
         font-size: 22px;
     }
@@ -648,9 +628,9 @@ body {
     }
 
     .btn-1 {
-        padding: 10px 30px;
-        margin-top: 5px;
-        font-size: 14px;
+        padding: 1rem 3rem;
+        margin-top: 0.5rem;
+        font-size: 1.4rem;
     }
 
     .footer-content {
@@ -664,11 +644,11 @@ body {
     }
 
     .link-social h3, .link-contact h3 {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     .link-social ul li a, .link-contact ul li a {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
 }
