@@ -894,3 +894,530 @@ body {
         --blur-bg: rgba(0, 0, 0, 0.3);
     }
 }
+
+
+/* Estilos específicos para la página de automatismos */
+.automatismos-page .header, 
+.mantenimientos-page .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+                url('LOGOTIPOS DE DOORMASTER/LOGO4.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Opcional: para un efecto parallax */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    
+}
+
+
+
+/* Fondo degradado azul para todas las secciones de proyectos */
+.automatismos-page .project-category, .mantenimientos-page .project-category {
+    background: var(--gradient-primary);
+    color: var(--text-light);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: 0; /* Para evitar espacios entre secciones */
+}
+
+/* Asegurar que todos los textos en estas secciones sean blancos */
+.automatismos-page .project-category h3,
+.automatismos-page .project-category p,
+.automatismos-page .project-category .feature span {
+    color: var(--text-light);
+}
+
+/* Ajustar el color de los checkmarks si es necesario */
+.automatismos-page .project-category .feature i, .mantenimientos-page .project-category .feature i {
+    color: var(--secondary-color); /* O mantener el verde si prefieres */
+}
+
+.automatismos-page .header-content, .mantenimientos-page .header-content {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.automatismos-page .header-features, .mantenimientos-page .header-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.automatismos-page .feature, .mantenimientos-page .feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-light);
+    font-size: var(--font-size-md);
+}
+
+.automatismos-page .feature i, .mantenimientos-page .feature i {
+    color: var(--secondary-color);
+    font-size: var(--font-size-xl);
+}
+
+/* Ajustes para las características de categoría */
+.automatismos-page .category-features, .mantenimientos-page .category-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.automatismos-page .category-features .feature, .mantenimientos-page .category-features .feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-dark); /* Cambiado a color oscuro */
+}
+
+.automatismos-page .category-features .feature i, .mantenimientos-page .category-features .feature i {
+    color: #25D366; /* Color verde de WhatsApp para los checkmarks */
+    font-size: var(--font-size-lg);
+}
+
+/* Sección de servicios principales */
+.automatismos-page .main-services, .mantenimientos-page .main-services {
+    padding: var(--spacing-xl) 0;
+    background: var(--gradient-primary);
+}
+
+
+/* Sección de servicios principales */
+.automatismos-page .services-grid, .mantenimientos-page .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.automatismos-page .service-card, .mantenimientos-page .service-card {
+    min-height: unset; /* Eliminar la altura mínima anterior */
+    height: 500px; /* Establecer una altura fija */
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-standard);
+    text-align: center;
+    transition: var(--transition-standard);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.automatismos-page .service-card > *, .mantenimientos-page .service-card > * {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Ajustes para las imágenes dentro de las tarjetas */
+.automatismos-page .service-card img, .mantenimientos-page .service-card img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover;
+    border-radius: var(--border-radius-standard);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Ajustes para el texto dentro de las tarjetas */
+.automatismos-page .service-card h3, .mantenimientos-page .service-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.automatismos-page .service-card p, .mantenimientos-page .service-card p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.automatismos-page .service-icon, .mantenimientos-page .service-icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Sección de proyectos */
+.automatismos-page .projects-showcase, .mantenimientos-page .projects-showcase {
+    padding: var(--spacing-xl) 0;
+    background: var(--gradient-primary);
+}
+
+.automatismos-page .project-category, .mantenimientos-page .project-category {
+    margin-bottom: var(--spacing-xl);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.automatismos-page .category-info, .mantenimientos-page .category-info {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.automatismos-page .category-features, .mantenimientos-page .category-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+/* Estilo para los títulos de las categorías */
+.automatismos-page .category-info h3, .mantenimientos-page .category-info h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+/* Galería con Swiper */
+.automatismos-page .project-slide, .mantenimientos-page .project-slide {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-standard);
+}
+
+.automatismos-page .project-slide img, .mantenimientos-page .project-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.automatismos-page .slide-info, .mantenimientos-page .slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-md);
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: var(--text-light);
+}
+
+/* Sección Por Qué Elegirnos */
+.automatismos-page .why-choose-us, .mantenimientos-page .why-choose-us {
+    padding: var(--spacing-xl) 0;
+    background: var(--gradient-primary);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.automatismos-page .benefits-grid, .mantenimientos-page .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+}
+
+.automatismos-page .benefit-card, .mantenimientos-page .benefit-card {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-standard);
+    transition: var(--transition-standard);
+}
+
+.automatismos-page .benefit-card h3, .mantenimientos-page .benefit-card h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+.automatismos-page .benefit-card p, .mantenimientos-page .benefit-card p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+/* Ajuste del tamaño de los iconos en las tarjetas de beneficios */
+.automatismos-page .benefit-card i, .mantenimientos-page .benefit-card i {
+    font-size: 4.5rem; 
+    margin-bottom: var(--spacing-md); 
+    color: var(--secondary-color);
+}
+
+/* Sección CTA */
+.automatismos-page .cta-section, .mantenimientos-page .cta-section {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                url('LOGOTIPOS DE DOORMASTER/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.automatismos-page .cta-buttons, .mantenimientos-page .cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+    position: relative;
+    bottom: 30px; 
+}
+
+/* Estilos comunes para ambos botones */
+.automatismos-page .btn-1, .mantenimientos-page .btn-1,
+.automatismos-page .btn-2, .mantenimientos-page .btn-2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 55px;
+    border: 0.1rem solid #00fff2;
+    background: var(--blur-bg);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3), 
+                inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    color: var(--secondary-color);
+    margin-top: var(--spacing-lg);
+    transition: var(--transition-standard);
+    position: relative;
+    z-index: 2;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    overflow: hidden;
+    will-change: transform;
+    gap: var(--spacing-sm);
+    min-width: 250px;
+}
+
+/* Efecto de gradiente para ambos botones */
+.automatismos-page .btn-1::before, .mantenimientos-page .btn-1::before,
+.automatismos-page .btn-1::after, .mantenimientos-page .btn-1::after,
+.automatismos-page .btn-2::before, .mantenimientos-page .btn-2::before,
+.automatismos-page .btn-2::after, .mantenimientos-page .btn-2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, #0e2455, #1552c0, #3690ff, #126ecf);
+    background-size: 300%;
+    border-radius: 25px;
+    transition: var(--transition-standard);
+    z-index: -1;
+}
+
+/* Efectos hover comunes */
+.automatismos-page .btn-1:hover::before, .mantenimientos-page .btn-1:hover::before,
+.automatismos-page .btn-1:hover::after, .mantenimientos-page .btn-1:hover::after,
+.automatismos-page .btn-2:hover::before, .mantenimientos-page .btn-2:hover::before,
+.automatismos-page .btn-2:hover::after, .mantenimientos-page .btn-2:hover::after {
+    background-position: 100%;
+    filter: blur(25px);
+}
+
+.automatismos-page .btn-1:hover, .mantenimientos-page .btn-1:hover,
+.automatismos-page .btn-2:hover, .mantenimientos-page .btn-2:hover {
+    background-color: #dcdee099;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Estilos para los iconos */
+.automatismos-page .btn-1 i, .mantenimientos-page .btn-1 i,
+.automatismos-page .btn-2 i, .mantenimientos-page .btn-2 i {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los iconos */
+.automatismos-page .btn-1:hover i, .mantenimientos-page .btn-1:hover i,
+.automatismos-page .btn-2:hover i, .mantenimientos-page .btn-2:hover i {
+    transform: scale(1.1);
+}
+
+/* Contenedor de botones */
+.automatismos-page .cta-buttons, .mantenimientos-page .cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+}
+
+
+/* Animaciones específicas */
+.automatismos-page .animate-in, .mantenimientos-page .animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries específicas para automatismos */
+@media (max-width: 768px) {
+    .automatismos-page .header-features, .mantenimientos-page .header-features {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .automatismos-page .category-features, .mantenimientos-page .category-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    .automatismos-page .cta-buttons, .mantenimientos-page .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .automatismos-page .service-card, .mantenimientos-page .service-card,
+    .automatismos-page .benefit-card, .mantenimientos-page .benefit-card {
+        padding: var(--spacing-md);
+    }
+
+    .automatismos-page .project-slide img, .mantenimientos-page .project-slide img {
+        height: 300px;
+    }
+
+    .automatismos-page .cta-buttons, .mantenimientos-page .cta-buttons {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .automatismos-page .btn-1, .mantenimientos-page .btn-1,
+    .automatismos-page .btn-2, .mantenimientos-page .btn-2 {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 30px;
+    }
+
+    .automatismos-page .category-info h3, .mantenimientos-page .category-info h3 {
+        font-size: 2.5rem;  /* Tamaño más pequeño para móviles */
+        margin-top: var(--spacing-md);
+    }
+
+    .automatismos-page .benefit-card h3, .mantenimientos-page .benefit-card h3 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.2;
+    }
+    
+    .automatismos-page .benefit-card p, .mantenimientos-page .benefit-card p {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+}
+
+/* Efectos hover */
+.automatismos-page .service-card:hover, .mantenimientos-page .service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.automatismos-page .benefit-card:hover, .mantenimientos-page .benefit-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Títulos y textos */
+.automatismos-page .section-title, .mantenimientos-page .section-title {
+    text-align: center;
+    font-size: var(--font-size-xxl);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.automatismos-page .section-title::after, .mantenimientos-page .section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: var(--spacing-sm) auto;
+    border-radius: 2px;
+}
+
+.video-showcase {
+    padding: var(--spacing-xl) 0;
+    background: var(--gradient-primary);
+    position: relative;
+    z-index: 1;
+}
+
+.video-cards-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.video-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-standard);
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-card h3 {
+    color: var(--text-light);
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.video-card .video-container {
+    margin-bottom: 2rem;
+}
+
+.video-card .maintenance-video {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--box-shadow-standard);
+}
+
+.video-card .category-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.video-card .feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-light);
+}
+
+.video-card .feature i {
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .video-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card {
+        width: 90%;
+    }
+
+    .video-card .maintenance-video {
+        height: 250px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

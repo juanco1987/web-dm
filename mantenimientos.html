@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expertos en mantenimiento de puertas de vidrio. Servicio profesional y garantizado 24/7.">
     <title>DOORMASTER-MANTENIMIENTOS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-        />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYDF97516V">
-    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYDF97516V"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-TYDF97516V');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TYDF97516V');
     </script>
 </head>
-<body>
-
+<body class="mantenimientos-page">
     <header class="header">
+        <!-- Menú de navegación -->
         <div class="menu container">
             <a href="#" class="logo"><i class="fas fa-door-open"></i> DOORMASTER</a>
             <input type="checkbox" id="menu" />
@@ -51,78 +47,185 @@
             </nav>
         </div>
 
+        <!-- Nuevo contenido del header -->
         <div class="header-content container">
-            <h1> ¿Tu puerta de vidrio está dañada? ¡No esperes más!</h1>
-            <p>
-                Desde la instalación hasta la reparación, ofrecemos un servicio integral para todas tus necesidades en puertas de vidrio. 
-                Contamos con un amplio stock de piezas de repuesto y brindamos soluciones personalizadas.
+            <h1 class="animate-fade-in">Mantenimiento Profesional de Puertas de Vidrio</h1>
+            <p class="header-description animate-fade-in-delay">
+                Previene costosas reparaciones y extiende la vida útil de tus puertas. 
+                Más de 15 años cuidando la seguridad y funcionamiento de puertas en hogares y empresas.
             </p>
-            <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-file-alt"></i> Solicita tu cotización ahora</a>
+            <div class="header-features">
+                <div class="feature">
+                    <i class="fas fa-tools"></i>
+                    <span>Mantenimiento Preventivo</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <span>Servicio de Emergencia 24/7</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Técnicos Certificados</span>
+                </div>
+            </div>
+            <div class="header-cta">
+                <a href="https://wa.me/+573106947033" class="btn-1">
+                    <i class="fas fa-calendar-check"></i> Agenda tu Mantenimiento
+                </a>
+            </div>
         </div>
-        
     </header>
+
+    <!-- Nueva sección de servicios -->
+    <section class="main-services">
+        <div class="container">
+            <h2 class="section-title">Servicios de Mantenimiento Especializado</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>
+                        • Inspección completa del sistema<br>
+                        • Lubricación de mecanismos<br>
+                        • Ajuste de bisagras y cerraduras<br>
+                        • Verificación de seguridad
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Reparación y Ajustes</h3>
+                    <p>
+                        • Reparación de mecanismos<br>
+                        • Cambio de piezas desgastadas<br>
+                        • Ajuste de alineación<br>
+                        • Corrección de problemas
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Planes de Mantenimiento</h3>
+                    <p>
+                        • Visitas programadas<br>
+                        • Descuentos especiales<br>
+                        • Prioridad de atención<br>
+                        • Garantía extendida
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reemplazar la sección de projects-showcase por esto -->
+    <section class="video-showcase">
+        <div class="container">
+            <h2 class="section-title">Nuestro Trabajo Profesional</h2>
+            
+            <div class="video-cards-container">
+                <!-- Tarjeta 1 -->
+                <div class="video-card">
+                    <h3>Mantenimiento a Mecanismos de Cierre</h3>
+                    <div class="video-container">
+                        <video class="maintenance-video" autoplay muted loop playsinline>
+                            <source src="LOGOTIPOS DE DOORMASTER/mantenimiento-bisagra-de-piso - Hecho con Clipchamp_1730778212488.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </div>
+                    <div class="category-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Diagnóstico completo</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Limpieza profesional</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Lubricación especializada</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Tarjeta 2 -->
+                <div class="video-card">
+                    <h3>Mantenimiento a Puertas de Vidrio</h3>
+                    <div class="video-container">
+                        <video class="maintenance-video" autoplay muted loop playsinline>
+                            <source src="LOGOTIPOS DE DOORMASTER/mant-puer-vidrio-cambio-bases.mp4" type="video/mp4">
+                            Tu navegador no soporta videos HTML5.
+                        </video>
+                    </div>
+                    <div class="category-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Diagnóstico completo</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Accesorios de calidad</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Venta e Instalación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Nueva sección Por Qué Elegirnos -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">¿Por Qué Elegir Nuestro Mantenimiento?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Ahorro a Largo Plazo</h3>
+                        <p>Evita costosas reparaciones y reemplazos con mantenimiento preventivo regular</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Mayor Seguridad</h3>
+                        <p>Puertas bien mantenidas garantizan la seguridad de tu familia y empleados</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Respuesta Rápida</h3>
+                        <p>Servicio de emergencia disponible 24/7 para tu tranquilidad</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Garantía de Servicio</h3>
+                        <p>Todos nuestros trabajos están respaldados por garantía escrita</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Nueva sección CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>¿Quieres prevenir problemas en tus puertas?</h2>
+                <p>Agenda una inspección y obtén un 15% de descuento en tu primer mantenimiento</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/+573106947033" class="btn-1">
+                        <i class="fab fa-whatsapp"></i> Solicitar Inspección 
+                    </a>
+                    <a href="tel:3106947033" class="btn-2">
+                        <i class="fas fa-phone"></i> Llamar para Consulta
+                    </a>
+                </div>
+            </div>
+        </section>
     
 
-    
-
-    <div class="swiper mySwiper1">
-        <div class="titulo">
-            <h2>Mantenimiento Profesional de Mecanismos de Cierre para Puertas de Vidrio</h2>
-            <p>
-                Descubre cómo nuestros técnicos especializados aseguran la máxima eficiencia y seguridad en cada puerta de vidrio. Mantén tus mecanismos en perfecto estado con nuestros servicios de mantenimiento preventivo, diseñados para prolongar la vida útil de tus instalaciones y evitar costosos reemplazos.
-            </p>
-        </div>
-        
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-1.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-2.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-3.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-4.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-5.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-6.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-7.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/man-pu-8.jpg');">
-            </div>
-        </div>
-    </div> 
-
-    <div class="swiper mySwiper2">
-        <div class="titulo">
-            <h2>¿Tus puertas de vidrio no funcionan como antes? ¡Tenemos la solución!</h2>
-            <p>
-                Con años de experiencia, nuestros técnicos especializados te garantizan un mantenimiento de calidad para tus puertas de vidrio. 
-                Realizamos ajustes precisos, reparamos daños y reemplazamos piezas desgastadas, 
-                asegurando un funcionamiento óptimo y prolongando la vida útil de tus instalaciones.
-            </p>
-        </div>
-        
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-1.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-2.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-3.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-4.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-5.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-6.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-7.jpg');">
-            </div>
-            <div class="swiper-slide" style="background-image: url('LOGOTIPOS DE DOORMASTER/mapu-8.jpg');">
-            </div>
-        </div>
-    </div> 
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content container">
             <div class="link-social">
@@ -144,98 +247,66 @@
         </div>
         <div class="copyright">
             &copy; <span id="year"></span> Doormaster. Todos los derechos reservados.
-          </div>
+        </div>
     </footer>
-
-  
-
+     
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        const yearElement = document.getElementById('year');
-        yearElement.textContent = new Date().getFullYear();
-        
-        var swiper1 = new Swiper(".mySwiper1", {
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 3, 
-            spaceBetween: 30, 
-            loop: false, 
-            autoplay: {
-                delay: 4000, 
-                disableOnInteraction: true,
-            },
-            speed: 1200, 
-            breakpoints: {
-                768: {
-                    slidesPerView: 2, 
-                },
-                1024: {
-                    slidesPerView: 3, 
-                },
-                1400: {
-                    slidesPerView: 4, 
-                }
-            }
-        });
-        
-        var swiper2 = new Swiper(".mySwiper2", {
+        // Configuración del Swiper
+        const swiperOptions = {
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 3,
             spaceBetween: 30,
-            loop: false,
+            loop: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
             },
             speed: 1200,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
             breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 3
                 },
-                1400: {
-                    slidesPerView: 4,
+                768: {
+                    slidesPerView: 2
+                },
+                480: {
+                    slidesPerView: 1
                 }
             }
+        };
+
+        // Inicialización de los Swipers
+        new Swiper(".mySwiper3", swiperOptions);
+        new Swiper(".mySwiper4", swiperOptions);
+        new Swiper(".mySwiper5", swiperOptions);
+
+        // Animaciones al hacer scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animaciones
+        document.querySelectorAll('.benefit-card, .service-card, .project-category').forEach(el => {
+            observer.observe(el);
         });
-        
-        
-        let forward = true; 
 
-function changeSlide(swiper, time) {
-    let currentSlide = 0;
-
-    function goToNextSlide() {
-        if (forward) {
-            swiper.slideTo(currentSlide);
-            currentSlide++;
-            if (currentSlide === swiper.slides.length) {
-                forward = false;
-                currentSlide -= 2; 
-            }
-        } else {
-            swiper.slideTo(currentSlide);
-            currentSlide--;
-            if (currentSlide < 0) {
-                forward = true;
-                currentSlide = 1; 
-            }
-        }
-        setTimeout(goToNextSlide, time);
-    }
-
-    setTimeout(goToNextSlide, time);
-}
-        
-        const time = 5000; 
-        changeSlide(swiper1, time);
-        changeSlide(swiper2, time);
-        
-        
+        // Actualizar año en el copyright
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    
 </body>
 </html>
