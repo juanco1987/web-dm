@@ -1,0 +1,25 @@
+{
+  "name": "web-dm",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purge": "purgecss --css style.css --content ./*.html --output style.min.css --safelist swiper aos fade menu navbar submenu header-content service-card video-card maintenance-video automatismos-page mantenimientos-page benefit-card project-category category-features feature"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanco1987/web-dm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanco1987/web-dm/issues"
+  },
+  "homepage": "https://github.com/juanco1987/web-dm#readme",
+  "devDependencies": {
+    "purgecss": "^5.0.0"
+  }
+}
