@@ -1,0 +1,12 @@
+/* =============================================
+   cerrajeria.css — Estilos específicos de la
+   página de cerrajería (cerrajeria.html)
+   La página reutiliza swiper.css, cards.css
+   y hero.css sin necesitar overrides propios.
+   ============================================= */
+
+/* Fondo específico del header de cerrajería */
+.cerrajeria-page .header {
+    background: linear-gradient(rgba(2,12,27,0.7), rgba(10,25,47,0.8)),
+                url('/LOGOTIPOS DE DOORMASTER/cerradura-2.webp') center/cover no-repeat;
+}

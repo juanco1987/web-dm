@@ -1,0 +1,30 @@
+/* =========================================
+   main.css — Punto de entrada de estilos
+   El orden de importación define la cascada
+   ========================================= */
+
+/* 1. Variables de diseño */
+@import './variables.css';
+
+/* 2. Reset y base */
+@import './reset.css';
+
+/* 3. Componentes compartidos */
+@import './components/nav.css';
+@import './components/hero.css';
+@import './components/cards.css';
+@import './components/footer.css';
+@import './components/swiper.css';
+@import './components/whatsapp.css';
+@import './components/wipe.css';
+
+/* 4. Estilos por página */
+@import './pages/automatismos.css';
+@import './pages/mantenimientos.css';
+@import './pages/cerrajeria.css';
+
+/* 5. Keyframes y animaciones JS-driven */
+@import './animations.css';
+
+/* 6. Media queries unificados (siempre al final) */
+@import './responsive.css';

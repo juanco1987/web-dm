@@ -1,0 +1,38 @@
+/* ---- Cortina de transición ---- */
+.page-transition-wipe {
+    will-change: transform;
+}
+
+/* ---- Orbes de luz ambiental ---- */
+.glow-orb {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    mix-blend-mode: screen;
+    filter: blur(140px);
+    opacity: 0.15;
+    transition: transform 1.8s cubic-bezier(0.22,1,0.36,1);
+}
+
+.orb-primary {
+    background: radial-gradient(circle, rgba(0,112,243,0.35) 0%, rgba(0,0,0,0) 70%);
+    top: -10%;
+    left: -10%;
+}
+
+.orb-secondary {
+    background: radial-gradient(circle, rgba(100,255,218,0.25) 0%, rgba(0,0,0,0) 70%);
+    bottom: -15%;
+    right: -10%;
+}
+
+/* ---- Títulos outline estilo futurista ---- */
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}

@@ -1,0 +1,297 @@
+/* ---- Sección Features (index) ---- */
+.features-section {
+    background-color: var(--dark-bg);
+    padding: var(--spacing-lg) var(--spacing-sm);
+    position: relative;
+    z-index: 10;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--box-shadow-standard);
+    text-align: center;
+    transition: var(--transition-standard);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-sm);
+    background: rgba(255,255,255,0.1);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: var(--transition-fast);
+}
+
+.feature-box:hover .feature-icon {
+    background: var(--secondary-color);
+    color: #000000;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.feature-box h3 {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.feature-box p {
+    font-size: var(--font-size-sm);
+    color: #a0aec0;
+    line-height: 1.5;
+}
+
+/* ---- Sección Servicios (index) ---- */
+.services-section {
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    background: var(--gradient-primary);
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-section h2 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+/* ---- Tarjeta de servicio (index) ---- */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 850px;
+    width: calc(33.333% - 4rem);
+    min-width: 300px;
+    max-width: 380px;
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--box-shadow-standard);
+    transition: var(--transition-standard);
+    margin: var(--spacing-md) 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.service-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+}
+
+.service-card .btn-1 {
+    margin: var(--spacing-md) auto;
+    align-self: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.service-card h3 {
+    margin: var(--spacing-xs) 0;
+    font-size: var(--font-size-xl);
+    color: var(--text-light);
+}
+
+.service-card p {
+    padding: 0 var(--spacing-sm);
+    color: #f2eded;
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+}
+
+.service-card ul {
+    font-size: var(--font-size-md);
+    padding: 0 var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+}
+
+/* ---- Tarjeta de beneficio ---- */
+.benefit-card {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--box-shadow-standard);
+    text-align: center;
+    transition: var(--transition-standard);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.benefit-card i {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.1);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+}
+
+.benefit-card h3 {
+    color: var(--text-light);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: #a0aec0;
+}
+
+/* ---- Grids compartidos ---- */
+.main-services,
+.projects-showcase,
+.why-choose-us,
+.cta-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    background-color: var(--dark-bg);
+}
+
+.services-grid,
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---- CTA Section ---- */
+.cta-section {
+    text-align: center;
+    background: linear-gradient(rgba(2,12,27,0.9), rgba(2,12,27,0.9)),
+                url('/LOGOTIPOS DE DOORMASTER/mmotor-levad.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.cta-section h2 {
+    font-size: 3.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.cta-section p {
+    font-size: 1.8rem;
+    color: #a0aec0;
+    margin-bottom: 3rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* ---- Glare (efecto tilt 3D) ---- */
+.card-glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    border-radius: inherit;
+    opacity: 0;
+    mix-blend-mode: overlay;
+    transition: opacity 0.6s ease;
+}
+
+/* ---- Glassmorphism premium (todas las tarjetas) ---- */
+.service-card,
+.benefit-card,
+.feature-box,
+.video-card {
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform 0.9s cubic-bezier(0.22,1,0.36,1),
+                box-shadow 0.9s cubic-bezier(0.22,1,0.36,1);
+    background: linear-gradient(135deg, rgba(4,7,188,0.22) 0%, rgba(2,12,27,0.8) 50%, rgba(1,15,78,0.35) 100%);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(100,255,218,0.08);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5),
+                inset 0 1px 1px rgba(255,255,255,0.08);
+    overflow: hidden;
+}
+
+.service-card:hover,
+.benefit-card:hover,
+.feature-box:hover,
+.video-card:hover {
+    border-color: rgba(100,255,218,0.25);
+    box-shadow: 0 25px 55px rgba(0,112,243,0.25),
+                inset 0 1px 2px rgba(255,255,255,0.15);
+}
+
+/* ---- Delays de stagger para grids ---- */
+.services-grid > .service-card:nth-child(1),
+.benefits-grid > .benefit-card:nth-child(1),
+.features-container > .feature-box:nth-child(1),
+.video-cards-container > .video-card:nth-child(1) { transition-delay: 0.15s; }
+
+.services-grid > .service-card:nth-child(2),
+.benefits-grid > .benefit-card:nth-child(2),
+.features-container > .feature-box:nth-child(2),
+.video-cards-container > .video-card:nth-child(2) { transition-delay: 0.4s; }
+
+.services-grid > .service-card:nth-child(3),
+.benefits-grid > .benefit-card:nth-child(3),
+.features-container > .feature-box:nth-child(3) { transition-delay: 0.65s; }
+
+.services-grid > .service-card:nth-child(4),
+.benefits-grid > .benefit-card:nth-child(4),
+.features-container > .feature-box:nth-child(4) { transition-delay: 0.9s; }

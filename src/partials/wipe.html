@@ -1,0 +1,42 @@
+<!-- Cortina de Transición Digital Premium -->
+<div class="page-transition-wipe" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #020c1b; z-index: 9999; transform: translate3d(0, 0, 0); display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: all;">
+    <!-- Escena 1: Logotipo Estándar -->
+    <div class="page-transition-logo-wrapper" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div class="page-transition-logo" style="font-family: 'Poppins', sans-serif; font-size: 2.8rem; font-weight: 800; color: #ffffff; letter-spacing: 3px; text-transform: uppercase; opacity: 0; transform: translate3d(0, 30px, 0); will-change: transform, opacity;">
+            DOOR<span style="color: #64ffda;">MASTER</span>
+        </div>
+        <div style="width: 120px; height: 2px; background: rgba(255,255,255,0.1); margin-top: 15px; border-radius: 2px; overflow: hidden; position: relative;">
+            <div class="page-transition-bar" style="position: absolute; top: 0; left: 0; width: 40%; height: 100%; background: #64ffda; border-radius: inherit; animation: wipeBarAnim 1.5s infinite ease-in-out;"></div>
+        </div>
+    </div>
+    
+    <!-- Escena 2: Cerrajería Mecánica Premium (Llave Entrando & Desbloqueo) -->
+    <div class="transition-custom-scene" style="display: none; flex-direction: column; align-items: center; justify-content: center; position: absolute; z-index: 10000; pointer-events: none;">
+        <div class="unlock-pulse" style="position: absolute; width: 20px; height: 20px; border: 2px solid #64ffda; border-radius: 50%; opacity: 0; background: radial-gradient(circle, rgba(100,255,218,0.2) 0%, rgba(0,0,0,0) 75%); pointer-events: none; will-change: transform, opacity; z-index: 99;"></div>
+        
+        <div class="lock-animation-container" style="position: relative; width: 220px; height: 220px; display: flex; align-items: center; justify-content: center; overflow: visible;">
+            <svg class="transition-lock-svg" viewBox="0 0 100 100" style="width: 140px; height: 140px; fill: none; stroke: #ffffff; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 15px rgba(100,255,218,0.45)); will-change: transform, opacity; transform-origin: 50% 50%;">
+                <path d="M 34 35 L 34 24 A 16 16 0 0 1 66 24 L 66 35" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" fill="none" />
+                <rect x="22" y="35" width="56" height="47" rx="10" fill="#0b1a30" stroke="#64ffda" stroke-width="3" />
+                <rect x="26" y="39" width="48" height="39" rx="6" fill="none" stroke="rgba(100,255,218,0.15)" stroke-width="1" />
+                <g class="lock-core" style="transform-origin: 50px 50px; will-change: transform;">
+                    <circle cx="50" cy="50" r="16" fill="#0407bc" stroke="#ffffff" stroke-width="2.5" />
+                    <rect x="47" y="42" width="6" height="16" rx="2" fill="#020c1b" stroke="#64ffda" stroke-width="2" />
+                    <circle cx="50" cy="45" r="1.2" fill="#64ffda" />
+                </g>
+            </svg>
+            
+            <svg class="transition-key-svg" viewBox="0 0 100 100" style="position: absolute; width: 95px; height: 95px; fill: none; stroke: #64ffda; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 10px rgba(100,255,218,0.7)); transform: translate3d(160px, 0, 0); opacity: 0; will-change: transform, opacity; transform-origin: 26px 50px;">
+                <circle cx="76" cy="50" r="11" />
+                <circle cx="76" cy="50" r="3.5" />
+                <line x1="65" y1="50" x2="26" y2="50" />
+                <line x1="33" y1="50" x2="33" y2="60" stroke-width="2.5" />
+                <line x1="41" y1="50" x2="41" y2="57" stroke-width="2.5" />
+                <line x1="49" y1="50" x2="49" y2="60" stroke-width="2.5" />
+            </svg>
+        </div>
+        <div class="lock-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: #ffffff; letter-spacing: 4px; text-transform: uppercase; margin-top: 15px; opacity: 0; transform: translate3d(0, 15px, 0); will-change: transform, opacity; text-align: center;">
+            Apertura de Seguridad
+        </div>
+    </div>
+</div>

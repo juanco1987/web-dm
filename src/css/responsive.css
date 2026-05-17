@@ -1,0 +1,288 @@
+/* ===================================================
+   RESPONSIVE — un solo bloque por breakpoint
+   =================================================== */
+
+/* ---- Accesibilidad: reducir movimiento ---- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---- Activar will-change solo cuando el usuario acepta animaciones ---- */
+@media (prefers-reduced-motion: no-preference) {
+    .service-card,
+    .btn-1,
+    .link-social a,
+    .link-contact a {
+        will-change: transform;
+    }
+}
+
+/* ---- Móvil: ≤ 768px ---- */
+@media (max-width: 768px) {
+
+    /* Menú */
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-md) 0;
+        background: var(--blur-bg-dark);
+    }
+
+    .menu.container {
+        padding: var(--spacing-sm);
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .menu label { display: block; }
+
+    .menu .navbar {
+        display: none;
+        width: 100%;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        margin: var(--spacing-xs) 0;
+    }
+
+    .menu .navbar ul li a {
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+
+    #menu:checked ~ .navbar { display: block; }
+
+    /* Header */
+    .header {
+        min-height: 50vh;
+        padding: 30px 0;
+        background-position: center;
+    }
+
+    .header-content {
+        margin-top: 60px;
+        padding-top: var(--spacing-md);
+    }
+
+    .header-content h1 {
+        font-size: var(--font-size-xl);
+        line-height: 1.3;
+        padding: var(--spacing-sm);
+    }
+
+    .header-content p {
+        font-size: var(--font-size-md);
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Features section */
+    .features-section {
+        margin-top: 0;
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Swiper cerrajería */
+    .swiper-slide {
+        width: 280px;
+        height: 350px;
+        padding: var(--spacing-sm);
+        border-radius: 15px;
+    }
+
+    .product-txt         { text-align: center; }
+    .product-txt h3      { font-size: var(--font-size-md); margin-top: -40px; }
+    .product-txt p       { font-size: var(--font-size-sm); }
+    .product-img         { text-align: center; }
+    .product-img img     { width: 100px; }
+
+    /* Botones */
+    .btn-1 {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        margin-top: var(--spacing-xs);
+        font-size: var(--font-size-sm);
+    }
+
+    /* WhatsApp */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    /* Footer */
+    .footer          { padding: var(--spacing-lg) 0 var(--spacing-md); }
+    .footer-content  { flex-direction: column; gap: var(--spacing-lg); }
+
+    .link-social,
+    .link-contact    { width: 100%; padding: 0 var(--spacing-md); }
+
+    .link-social h3,
+    .link-contact h3 { font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); }
+
+    .link-social ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .link-social li  { margin-right: 0; }
+
+    .link-contact ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        align-items: center;
+    }
+
+    .copyright { margin-top: var(--spacing-lg); font-size: var(--font-size-sm); }
+
+    /* Tarjetas (index) */
+    .services-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        min-height: unset;
+    }
+
+    .service-card img { height: 22rem; }
+
+    /* Grids sub-páginas */
+    .services-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        padding: 0 var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    .automatismos-page .services-grid,
+    .mantenimientos-page .services-grid,
+    .automatismos-page .benefits-grid,
+    .mantenimientos-page .benefits-grid {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-md);
+    }
+
+    /* Automatismos / mantenimientos */
+    .automatismos-page .header-features,
+    .mantenimientos-page .header-features {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .automatismos-page .category-features,
+    .mantenimientos-page .category-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .automatismos-page .cta-buttons,
+    .mantenimientos-page .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .automatismos-page .service-card,
+    .mantenimientos-page .service-card,
+    .automatismos-page .benefit-card,
+    .mantenimientos-page .benefit-card {
+        padding: var(--spacing-md);
+    }
+
+    .automatismos-page .project-slide img,
+    .mantenimientos-page .project-slide img {
+        height: 250px;
+    }
+
+    .project-category {
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .project-category .swiper {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-slide img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .automatismos-page .btn-1,
+    .automatismos-page .btn-2,
+    .mantenimientos-page .btn-1,
+    .mantenimientos-page .btn-2 {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 30px;
+    }
+
+    .automatismos-page .category-info h3,
+    .mantenimientos-page .category-info h3 {
+        font-size: 2.5rem;
+        margin-top: var(--spacing-md);
+    }
+
+    .automatismos-page .benefit-card h3,
+    .mantenimientos-page .benefit-card h3 {
+        font-size: 2.8rem;
+    }
+
+    /* Video showcase */
+    .video-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card { width: 90%; }
+
+    .video-card .maintenance-video { height: 250px; }
+}
+
+/* ---- Tablet: 769px – 1199px ---- */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .services-container { gap: var(--spacing-md); }
+    .service-card { width: calc(50% - var(--spacing-lg)); }
+}
+
+/* ---- Desktop grande: ≥ 1200px ---- */
+@media (min-width: 1200px) {
+    .container       { max-width: 1400px; }
+    .service-card    { max-width: 45rem; }
+    .footer-content  { gap: var(--spacing-xl); }
+}

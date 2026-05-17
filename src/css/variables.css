@@ -1,0 +1,49 @@
+:root {
+    /* Colores */
+    --primary-color:   #0a192f;
+    --secondary-color: #64ffda;
+    --accent-color:    #0070f3;
+    --dark-bg:         #020c1b;
+    --text-light:      #ffffff;
+    --text-dark:       #333333;
+
+    /* Efectos */
+    --blur-bg:      rgba(10, 25, 47, 0.7);
+    --blur-bg-dark: rgba(2, 12, 27, 0.9);
+
+    /* Animaciones */
+    --transition-fast:     all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-standard: all 0.5s  cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #020c1b 0%, #0a192f 100%);
+    --gradient-footer:  linear-gradient(to bottom, #020c1b, #0a192f);
+    --gradient-btn:     linear-gradient(90deg, #0070f3, #00a6ed);
+
+    /* Sombras y bordes */
+    --box-shadow-standard:  0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    --box-shadow-hover:     0 20px 30px -15px rgba(2, 12, 27, 0.7);
+    --border-radius-standard: 12px;
+
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Tipografía */
+    --font-size-sm:  1.6rem;
+    --font-size-md:  1.8rem;
+    --font-size-lg:  2.2rem;
+    --font-size-xl:  2.8rem;
+    --font-size-xxl: 5rem;
+}
+
+/* Soporte para modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f4f4f4;
+        --blur-bg:   rgba(0, 0, 0, 0.3);
+    }
+}
