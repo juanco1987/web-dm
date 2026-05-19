@@ -101,7 +101,7 @@
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.55;
     margin-bottom: var(--spacing-md);
-    text-align: left;
+    text-align: center;
 }
 
 .footer-coverage-text strong {
@@ -117,16 +117,17 @@
     color: rgba(255, 255, 255, 0.5);
     margin: var(--spacing-sm) 0 0;
     line-height: 1.4;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-zones {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 var(--spacing-sm);
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    justify-content: center;
 }
 
 .footer-zones li {
@@ -139,7 +140,7 @@
 }
 
 .link-coverage {
-    text-align: left;
+    text-align: center;
     flex: 1 1 280px;
     max-width: 360px;
 }

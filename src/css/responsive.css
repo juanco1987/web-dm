@@ -199,16 +199,18 @@
     /* Tarjetas (index) */
     .services-container {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         padding: 0 var(--spacing-sm);
         gap: var(--spacing-md);
     }
 
-    .service-card {
+    .services-section .service-card {
         width: 100%;
         min-width: unset;
         max-width: 100%;
         min-height: unset;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .services-section .service-card-media img { height: 11rem; }
