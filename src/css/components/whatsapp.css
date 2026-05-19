@@ -16,12 +16,10 @@
     justify-content: center;
     text-decoration: none;
     animation: pulse-whatsapp 2s infinite;
-    transition: transform 0.4s cubic-bezier(0.25,1,0.5,1),
-                box-shadow 0.4s ease;
+    transition: background-color 0.2s ease;
 }
 
 .whatsapp-float:hover {
     background-color: #1ebe57;
     color: #fff;
-    transform: scale(1.1);
 }

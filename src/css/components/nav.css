@@ -1,27 +1,57 @@
-/* ---- Header y fondo hero (index) ---- */
-.header {
-    background: linear-gradient(rgba(2, 12, 27, 0.85), rgba(10, 25, 47, 0.7)),
-                url('LOGOTIPOS DE DOORMASTER/puerta-de-vidrio.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding-bottom: 2rem;
-}
-
 /* ---- Menú ---- */
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
     color: var(--text-light);
-    font-size: var(--font-size-xl);
+    font-size: clamp(2.6rem, 3.2vw, 3.6rem);
     font-weight: 800;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.14rem;
+    line-height: 1;
     position: relative;
-    animation: fade-in 1.5s ease-in-out;
+    text-decoration: none;
+}
+
+.logo-icon-wrap {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-lottie {
+    display: block;
+    width: clamp(3.4rem, 4.5vw, 4.4rem);
+    height: clamp(3.4rem, 4.5vw, 4.4rem);
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.logo-lottie svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.logo-text {
+    display: inline-flex;
+    overflow: visible;
+}
+
+.logo-letter {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    will-change: transform, opacity;
+}
+
+.logo-letter--accent {
+    color: #64ffda;
+}
+
+.logo:not(.logo--ready) .logo-letter {
+    opacity: 0;
 }
 
 .menu {

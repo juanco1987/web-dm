@@ -29,9 +29,9 @@
 /* ---- Reveal animado via IntersectionObserver ---- */
 .reveal-element {
     opacity: 0;
-    transform: translate3d(0, 90px, 0) scale(0.95);
-    transition: opacity 1.8s cubic-bezier(0.22,1,0.36,1),
-                transform 1.8s cubic-bezier(0.22,1,0.36,1);
+    transform: translate3d(0, 40px, 0) scale(0.98);
+    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal-element.animate-in {

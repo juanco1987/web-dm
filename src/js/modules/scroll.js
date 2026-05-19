@@ -5,6 +5,29 @@ import { LENIS_DURATION } from './constants.js'
 
 let _lenisTickFn = null
 
+function bindLenisScrollTrigger(lenis) {
+  lenis.on('scroll', ScrollTrigger.update)
+
+  ScrollTrigger.scrollerProxy(document.documentElement, {
+    scrollTop(value) {
+      if (arguments.length) {
+        lenis.scrollTo(value, { immediate: true })
+      }
+      return lenis.scroll
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
+    },
+  })
+
+  ScrollTrigger.addEventListener('refresh', () => lenis.resize())
+}
+
 /**
  * Inicializa Lenis smooth scroll y lo sincroniza con el ticker de GSAP.
  * @returns {Lenis} La instancia creada
@@ -22,13 +45,12 @@ export function initScroll() {
     infinite: false,
   })
 
-  lenis.on('scroll', ScrollTrigger.update)
-
-  // Eliminar tick anterior antes de registrar el nuevo
   if (_lenisTickFn) gsap.ticker.remove(_lenisTickFn)
   _lenisTickFn = (time) => lenis.raf(time * 1000)
   gsap.ticker.add(_lenisTickFn)
   gsap.ticker.lagSmoothing(0)
+
+  bindLenisScrollTrigger(lenis)
 
   return lenis
 }

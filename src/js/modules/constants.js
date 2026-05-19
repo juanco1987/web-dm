@@ -11,24 +11,38 @@ export const SPLIT_WORDS_DELAY = 750
 /** Duración del scroll líquido Lenis */
 export const LENIS_DURATION = 1.2
 
+/** Scroll reveal — tarjetas y títulos (más alto = aparecen antes al bajar) */
+export const SCROLL_REVEAL_START   = 'top 94%'
+export const SCROLL_CARD_DURATION  = 0.72
+export const SCROLL_TITLE_DURATION = 0.85
+
+/** Animación Lottie del logo (archivo en public/animations/) */
+export const LOTTIE_LOGO_PATH = '/animations/puerta-logo.json'
+
+/** Cortina Lottie al entrar a automatismos */
+export const LOTTIE_WIPE_AUTOMATISMOS = '/animations/puerta-automatismos.json'
+
+/** Sincronía cortina automatismos (ajustar si el texto adelanta a las puertas) */
+export const LOTTIE_WIPE_PLAYBACK_SPEED = 1.4
+export const LOTTIE_WIPE_DOORS_AT       = 0.52
+export const LOTTIE_WIPE_MIN_DOORS_MS   = 900
+
 /** Selectores CSS usados por múltiples módulos */
 export const SELECTORS = {
   wipe:            '.page-transition-wipe',
-  logoWrapper:     '.page-transition-logo-wrapper',
-  wipeLogo:        '.page-transition-logo',
-  wipeBar:         '.page-transition-bar',
-  customScene:     '.transition-custom-scene',
-  lockSvg:         '.transition-lock-svg',
-  keySvg:          '.transition-key-svg',
-  lockCore:        '.lock-core',
-  lockText:        '.lock-text',
-  unlockPulse:     '.unlock-pulse',
+  doorScene:       '.transition-door-scene',
+  doorPanel:       '.door-panel',
+  doorLight:       '.door-light',
+  doorBrandText:   '.door-brand-text',
+  doorVisualSvg:   '.door-visual--svg',
+  doorVisualLottie: '.door-visual--lottie',
+  doorWipeLottie:  '.door-wipe-lottie',
 
-  hero:            '.hero',
+  hero:            '.header',
   headerContent:   '.header-content',
 
-  grids:           '.services-grid, .benefits-grid, .features-container, .video-cards-container',
-  sectionTitles:   '.main-services h2, .why-choose-us h2, .projects-showcase h2, .gallery-section h2, .why-choose-us h3',
+  grids:           '.services-grid, .benefits-grid, .features-container, .coverage-grid, .video-cards-container, .services-container',
+  sectionTitles:   '.main-services h2, .why-choose-us h2, .projects-showcase h2, .gallery-section h2, .why-choose-us h3, .services-section h2',
   revealSections:  '.project-category, .cta-section',
 
   cards3d:         '.service-card, .benefit-card, .feature-box, .video-card',
@@ -36,6 +50,11 @@ export const SELECTORS = {
 
   waButton:        '.whatsapp-float',
   glowOrb:         '.glow-orb',
+
+  logo:            '.logo',
+  logoIconWrap:    '.logo-icon-wrap',
+  logoLottie:      '.logo-lottie',
+  logoLetter:      '.logo-letter',
 
   swiperCerrajeria:    '.mySwiper',
   swiperAutomatismos:  ['.mySwiper3', '.mySwiper4', '.mySwiper5'],

@@ -3,6 +3,76 @@
     will-change: transform;
 }
 
+.transition-door-scene {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 100vh;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.door-master-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: min(92vw, 300px);
+    max-height: 90vh;
+}
+
+.door-brand-text {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(3.4rem, 11vw, 5.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1.05;
+    padding-bottom: 1.25rem;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.door-brand-accent {
+    color: #64ffda;
+}
+
+.door-wrapper {
+    position: relative;
+    width: 100%;
+    height: clamp(240px, 42vh, 340px);
+    flex-shrink: 0;
+    perspective: 700px;
+}
+
+.door-lottie-wrap {
+    position: relative;
+    width: 100%;
+    height: clamp(200px, 36vh, 300px);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.door-wipe-lottie {
+    width: min(100%, 320px);
+    height: 100%;
+    max-height: 300px;
+}
+
+.door-wipe-lottie svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 /* ---- Orbes de luz ambiental ---- */
 .glow-orb {
     position: fixed;

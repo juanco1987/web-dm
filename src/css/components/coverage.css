@@ -1,0 +1,178 @@
+/* ---- Servicio a domicilio (sin oficina física) ---- */
+.coverage-section {
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, var(--dark-bg) 100%);
+    padding: var(--spacing-xl) var(--spacing-sm);
+    position: relative;
+    z-index: 2;
+}
+
+.coverage-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coverage-section .section-eyebrow {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.coverage-section h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.coverage-lead {
+    max-width: 42rem;
+    margin: 0 auto var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--font-size-md);
+    line-height: 1.65;
+}
+
+.coverage-lead strong {
+    color: var(--secondary-color);
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+.coverage-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-md);
+    transition: var(--transition-standard);
+}
+
+.coverage-card:hover {
+    border-color: rgba(100, 255, 218, 0.35);
+    transform: translateY(-4px);
+}
+
+.coverage-card i {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.coverage-card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xs);
+}
+
+.coverage-card p {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.coverage-zones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0.65rem;
+    margin-bottom: var(--spacing-lg);
+    padding: 0;
+    list-style: none;
+}
+
+.coverage-zones li {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    background: rgba(100, 255, 218, 0.08);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+}
+
+.coverage-cta .btn-1 {
+    margin-top: 0;
+}
+
+.coverage-note {
+    margin-top: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.coverage-by-service {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+    max-width: 900px;
+    margin: 0 auto var(--spacing-lg);
+    text-align: left;
+}
+
+.coverage-service {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--border-radius-standard);
+    padding: var(--spacing-lg);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.coverage-service--lock {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.coverage-service-label {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    color: #020c1b;
+    background: var(--secondary-color);
+}
+
+.coverage-service--lock .coverage-service-label {
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.coverage-service h3 {
+    font-size: var(--font-size-lg);
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.coverage-service p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.55;
+}
+
+.coverage-service strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .coverage-by-service {
+        grid-template-columns: 1fr;
+    }
+}

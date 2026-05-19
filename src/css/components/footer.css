@@ -18,7 +18,8 @@
 }
 
 .link-social,
-.link-contact {
+.link-contact,
+.link-coverage {
     background: rgba(255,255,255,0.05);
     padding: var(--spacing-lg);
     border-radius: 15px;
@@ -34,7 +35,8 @@
 }
 
 .link-social h3,
-.link-contact h3 {
+.link-contact h3,
+.link-coverage h3 {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-lg);
     color: var(--secondary-color);
@@ -93,6 +95,54 @@
 .link-social a.facebook:hover  { background: rgba(59,89,152,0.2);   color: #3b5998; }
 .link-social a.instagram:hover { background: rgba(225,48,108,0.2);  color: #e1306c; }
 .link-social a.whatsapp:hover  { background: rgba(37,211,102,0.2);  color: #25d366; }
+
+.footer-coverage-text {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.55;
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+.footer-coverage-text strong {
+    color: var(--secondary-color);
+}
+
+.footer-coverage-text--sub {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-coverage-footnote {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: var(--spacing-sm) 0 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.footer-zones {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.footer-zones li {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.25);
+    border-radius: 999px;
+    padding: 0.3rem 0.65rem;
+}
+
+.link-coverage {
+    text-align: left;
+    flex: 1 1 280px;
+    max-width: 360px;
+}
 
 .copyright {
     margin-top: var(--spacing-lg);

@@ -1,5 +1,8 @@
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SELECTORS } from './constants.js'
+import { destroyLogoLottie } from './logoAnimation.js'
+import { destroyWipeLottie } from './wipeLottie.js'
 
 /**
  * Limpia todas las instancias activas antes de reinicializar.
@@ -7,7 +10,11 @@ import { SELECTORS } from './constants.js'
  *
  * @param {{ lenis: import('lenis').default|null, observer: IntersectionObserver|null, swiperInstances: any[], splitWordsTimer: number|null }} state
  */
-export function teardown(state) {
+/**
+ * @param {object} state
+ * @param {{ duringWipeTransition?: boolean }} [options]
+ */
+export function teardown(state, { duringWipeTransition = false } = {}) {
   // ScrollTrigger: matar todos los triggers activos
   ScrollTrigger.getAll().forEach(t => t.kill())
 
@@ -25,6 +32,17 @@ export function teardown(state) {
 
   // Orbes de luz: eliminar los nodos inyectados
   document.querySelectorAll(SELECTORS.glowOrb).forEach(orb => orb.remove())
+
+  // No matar la cortina Lottie ni el logo mientras la transición sigue activa
+  if (!duringWipeTransition) {
+    destroyLogoLottie()
+    destroyWipeLottie()
+  }
+  const logo = document.querySelector(SELECTORS.logo)
+  if (logo) {
+    const letters = logo.querySelectorAll(SELECTORS.logoLetter)
+    if (letters.length) gsap.killTweensOf(letters)
+  }
 
   // Swiper: destruir instancias activas para evitar memory leak
   if (state.swiperInstances?.length) {

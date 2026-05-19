@@ -17,6 +17,7 @@
 @import './components/swiper.css';
 @import './components/whatsapp.css';
 @import './components/wipe.css';
+@import './components/coverage.css';
 
 /* 4. Estilos por página */
 @import './pages/automatismos.css';

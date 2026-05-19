@@ -23,7 +23,6 @@
 }
 
 .feature-box:hover {
-    transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
@@ -90,11 +89,10 @@
 }
 
 /* ---- Tarjeta de servicio (index) ---- */
-.service-card {
+.services-section .service-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 850px;
     width: calc(33.333% - 4rem);
     min-width: 300px;
     max-width: 380px;
@@ -102,15 +100,85 @@
     box-shadow: var(--box-shadow-standard);
     transition: var(--transition-standard);
     margin: var(--spacing-md) 0;
-    text-align: center;
+    text-align: left;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.service-card-media {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
     overflow: hidden;
 }
 
-.service-card-content {
+.service-card-body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-xs);
     padding: var(--spacing-md);
+    text-align: left;
+}
+
+.service-area-badge {
+    position: absolute;
+    left: 50%;
+    bottom: var(--spacing-sm);
+    transform: translateX(-50%);
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    max-width: calc(100% - 1.5rem);
+    padding: 0.45rem 0.9rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    white-space: nowrap;
+    border-radius: 999px;
+    color: #020c1b;
+    background: var(--secondary-color);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.service-area-badge i {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+.service-area-badge--city {
+    color: var(--text-light);
+    background: rgba(2, 12, 27, 0.88);
+    border: 1px solid rgba(100, 255, 218, 0.35);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.service-card-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(2, 12, 27, 0.75) 0%, transparent 45%);
+    pointer-events: none;
+}
+
+.service-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.service-card-actions .btn-1,
+.service-card-actions .btn-2 {
+    margin: 0;
+    flex: 1 1 auto;
+    min-width: 9.5rem;
+    text-align: center;
 }
 
 .service-card .btn-1 {
@@ -118,36 +186,50 @@
     align-self: center;
 }
 
-.service-card img {
+.services-section .service-card img {
+    display: block;
     width: 100%;
-    height: 40rem;
+    height: 14rem;
     object-fit: cover;
-    border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+    border-radius: 0;
     transition: transform 0.6s ease, opacity 0.3s ease;
 }
 
-.service-card:hover img {
+.services-section .service-card:hover .service-card-media img {
     transform: scale(1.05);
     opacity: 0.9;
 }
 
-.service-card h3 {
-    margin: var(--spacing-xs) 0;
-    font-size: var(--font-size-xl);
-    color: var(--text-light);
-}
-
-.service-card p {
-    padding: 0 var(--spacing-sm);
-    color: #f2eded;
+.services-section .service-card h3 {
+    margin: 0 0 var(--spacing-xs);
     font-size: var(--font-size-lg);
-    line-height: 1.6;
+    color: var(--text-light);
+    line-height: 1.35;
+    text-align: left;
 }
 
-.service-card ul {
-    font-size: var(--font-size-md);
-    padding: 0 var(--spacing-md);
-    margin: var(--spacing-sm) 0;
+.services-section .service-card p {
+    margin: 0;
+    padding: 0;
+    color: rgba(242, 237, 237, 0.92);
+    font-size: var(--font-size-sm);
+    line-height: 1.55;
+}
+
+.services-section .service-card ul {
+    font-size: var(--font-size-sm);
+    padding-left: 1.15rem;
+    margin: 0;
+    list-style: disc;
+}
+
+.services-section .service-card li {
+    margin-bottom: 0.25rem;
+    line-height: 1.45;
+}
+
+.services-section .service-card li::marker {
+    color: var(--secondary-color);
 }
 
 /* ---- Tarjeta de beneficio ---- */
@@ -161,7 +243,6 @@
 }
 
 .benefit-card:hover {
-    transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 

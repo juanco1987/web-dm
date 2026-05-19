@@ -46,22 +46,28 @@
       "@type": "LocalBusiness",
       "name": "DOORMASTER",
       "image": "https://www.doormasterjo.com/LOGOTIPOS DE DOORMASTER/LOGO3.webp",
-      "description": "Expertos en puertas automáticas, cerrajería y mantenimiento en Bogotá",
+      "description": "Servicio a domicilio: mantenimiento de puertas automáticas y de vidrio en Bogotá y alrededores; cerrajería 24/7 solo en Bogotá. Sin local físico.",
       "url": "https://www.doormasterjo.com",
       "telephone": "+573106947033",
       "email": "doormaster.jo@gmail.com",
+      "areaServed": {
+        "@type": "City",
+        "name": "Bogotá",
+        "containedInPlace": { "@type": "Country", "name": "Colombia" }
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Bogotá",
-        "addressCountry": "Colombia"
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
       },
       "priceRange": "$$",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "08:00",
-          "closes": "18:00"
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
         }
       ]
     }
@@ -80,29 +86,39 @@
         <div class="header-content container">
             <h1>Expertos en Seguridad: Puertas Automáticas y Cerrajería 24/7 en Bogotá</h1>
             <p>
-                <strong>Soluciones integrales para la tranquilidad de tu hogar y negocio.</strong><br>
-                Instalación, mantenimiento y reparación con técnicos certificados. Protege tu propiedad hoy mismo con la mejor tecnología.
+                <strong>Servicio 100% a domicilio</strong> — sin oficina física: el técnico va a ti.<br>
+                Mantenimiento de automatismos y vidrio en <strong>Bogotá y alrededores</strong>; cerrajería 24/7 <strong>solo en Bogotá</strong>.
             </p>
-            <a href="https://wa.me/+573106947033?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Doormaster" class="btn-1">
-                <i class="fab fa-whatsapp"></i> Cotiza tu servicio en 5 minutos
-            </a>
+            <div class="hero-cta">
+                <a href="https://wa.me/+573106947033?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Doormaster" class="btn-1">
+                    <i class="fab fa-whatsapp"></i> Cotiza en 5 minutos
+                </a>
+                <a href="#cobertura" class="btn-2">
+                    <i class="fas fa-map-marker-alt"></i> Servicio a domicilio
+                </a>
+            </div>
+            <div class="header-features">
+                <div class="feature"><i class="fas fa-medal"></i><span>Garantía Total</span></div>
+                <div class="feature"><i class="fas fa-user-shield"></i><span>Técnicos Certificados</span></div>
+                <div class="feature"><i class="fas fa-clock"></i><span>Servicio 24/7</span></div>
+            </div>
         </div>
     </header>
 
     <!-- Sección: Por qué elegirnos -->
     <section class="features-section">
         <div class="container features-container">
-            <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-box">
                 <div class="feature-icon"><i class="fas fa-clock"></i></div>
                 <h3>Servicio 24/7</h3>
-                <p>Disponibles a cualquier hora para emergencias de cerrajería en toda Bogotá.</p>
+                <p>Emergencias de cerrajería 24/7 — atención a domicilio solo dentro de Bogotá.</p>
             </div>
-            <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-box">
                 <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
                 <h3>Técnicos Certificados</h3>
                 <p>Personal altamente capacitado en automatismos, vidrios y seguridad.</p>
             </div>
-            <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-box">
                 <div class="feature-icon"><i class="fas fa-medal"></i></div>
                 <h3>Garantía Total</h3>
                 <p>Respaldamos todos nuestros trabajos y repuestos con garantía por escrito.</p>
@@ -110,12 +126,61 @@
         </div>
     </section>
 
-    <section class="services-section">
-        <h2 data-aos="fade-up">Nuestros Servicios</h2>
+    <section class="coverage-section" id="cobertura" aria-labelledby="coverage-title">
+        <div class="coverage-inner container">
+            <span class="section-eyebrow">Llegamos donde estés</span>
+            <h2 id="coverage-title">¿A dónde llegamos?</h2>
+            <p class="coverage-lead">
+                No tenemos vitrina ni local para visitar: <strong>el técnico va a ti</strong> con herramientas y repuestos.
+                La cobertura depende del tipo de servicio:
+            </p>
+            <div class="coverage-by-service">
+                <div class="coverage-service coverage-service--maint">
+                    <span class="coverage-service-label">Bogotá + alrededores</span>
+                    <h3>Automatismos y mantenimiento de vidrio</h3>
+                    <p>Soacha, Chía, Cajicá, Funza, Cota, Mosquera y zona metropolitana. Confirmamos al cotizar.</p>
+                </div>
+                <div class="coverage-service coverage-service--lock">
+                    <span class="coverage-service-label">Solo Bogotá</span>
+                    <h3>Cerrajería 24/7</h3>
+                    <p>Aperturas, cambio de cerraduras e instalación a domicilio dentro de la ciudad.</p>
+                </div>
+            </div>
+            <div class="coverage-grid features-container">
+                <article class="coverage-card feature-box">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                    <h3>Técnico en tu puerta</h3>
+                    <p>Coordinamos visita por WhatsApp o llamada. Tú indicas la dirección; nosotros nos desplazamos.</p>
+                </article>
+                <article class="coverage-card feature-box">
+                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                    <h3>Zona según servicio</h3>
+                    <p>Mantenimiento: Bogotá y alrededores. Cerrajería: únicamente dentro de Bogotá. Te confirmamos al cotizar.</p>
+                </article>
+                <article class="coverage-card feature-box">
+                    <i class="fas fa-headset" aria-hidden="true"></i>
+                    <h3>Atención inmediata</h3>
+                    <p>Cerrajería de emergencia 24/7 en Bogotá. Soporte de automatismos y vidrio según tu ubicación.</p>
+                </article>
+            </div>
+            <div class="coverage-cta">
+                <a href="https://wa.me/+573106947033?text=Hola%2C%20necesito%20un%20servicio%20a%20domicilio%20en%20Bogot%C3%A1.%20Mi%20zona%20es%3A%20" class="btn-1">
+                    <i class="fab fa-whatsapp"></i> Cotizar con mi zona
+                </a>
+                <p class="coverage-note">Indica servicio, barrio y municipio en WhatsApp. Para cerrajería, confirma que estás en Bogotá.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="servicios">
+        <h2>Nuestros Servicios</h2>
         <div class="services-container">
-            <article class="service-card" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="service-card-content">
+            <article class="service-card">
+                <div class="service-card-media">
                     <img src="/LOGOTIPOS DE DOORMASTER/mmotor-levad.webp" alt="Mantenimiento de Puertas Automáticas" loading="lazy" class="service-image" decoding="async">
+                    <span class="service-area-badge"><i class="fas fa-location-dot" aria-hidden="true"></i> Bogotá + alrededores</span>
+                </div>
+                <div class="service-card-body">
                     <h3>¿Tus puertas automáticas necesitan mantenimiento?</h3>
                     <p>
                         <strong>Contamos con técnicos especializados para mantener tus automatismos en óptimas condiciones.</strong><br>
@@ -129,12 +194,18 @@
                     </ul>
                     <p><strong>Beneficios:</strong> Mayor seguridad, menor consumo energético y funcionamiento óptimo.</p>
                 </div>
-                <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-search"></i> Solicitar revisión</a>
+                <div class="service-card-actions">
+                    <a href="automatismos.html" class="btn-2"><i class="fas fa-arrow-right"></i> Ver automatismos</a>
+                    <a href="https://wa.me/+573106947033?text=Hola%2C%20quiero%20cotizar%20mantenimiento%20de%20puertas%20autom%C3%A1ticas%20a%20domicilio" class="btn-1"><i class="fab fa-whatsapp"></i> Cotizar</a>
+                </div>
             </article>
 
-            <article class="service-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <div class="service-card-content">
+            <article class="service-card">
+                <div class="service-card-media">
                     <img src="/LOGOTIPOS DE DOORMASTER/puerta-de-vidrio.webp" alt="Mantenimiento de Puertas de Vidrio" loading="lazy" width="400" height="300" decoding="async" class="service-image">
+                    <span class="service-area-badge"><i class="fas fa-location-dot" aria-hidden="true"></i> Bogotá + alrededores</span>
+                </div>
+                <div class="service-card-body">
                     <h3>¿Tus puertas de vidrio necesitan un cuidado especial?</h3>
                     <p>
                         <strong>Nuestros técnicos especializados se encargan de mantener tus puertas de vidrio en perfecto estado.</strong><br>
@@ -148,12 +219,18 @@
                     </ul>
                     <p><strong>¡Prolonga la vida útil de tus puertas y mejora su estética!</strong></p>
                 </div>
-                <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-file-alt"></i> Solicita tu cotización ahora</a>
+                <div class="service-card-actions">
+                    <a href="mantenimientos.html" class="btn-2"><i class="fas fa-arrow-right"></i> Ver mantenimientos</a>
+                    <a href="https://wa.me/+573106947033?text=Hola%2C%20quiero%20cotizar%20mantenimiento%20de%20puertas%20de%20vidrio%20a%20domicilio" class="btn-1"><i class="fab fa-whatsapp"></i> Cotizar</a>
+                </div>
             </article>
 
-            <article class="service-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-                <div class="service-card-content">
+            <article class="service-card">
+                <div class="service-card-media">
                     <img src="/LOGOTIPOS DE DOORMASTER/cerradura-2.webp" alt="Cerrajería" loading="lazy" width="400" height="300" decoding="async" class="service-image">
+                    <span class="service-area-badge service-area-badge--city"><i class="fas fa-location-dot" aria-hidden="true"></i> Solo Bogotá</span>
+                </div>
+                <div class="service-card-body">
                     <h3>¡Cerrajería 24 horas a tu servicio!</h3>
                     <p>
                         <strong>¿Te quedaste fuera de casa? ¿Necesitas cambiar tu cerradura?</strong><br>
@@ -167,7 +244,10 @@
                     </ul>
                     <p><strong>¡Tu seguridad es nuestra prioridad!</strong></p>
                 </div>
-                <a href="https://wa.me/+573106947033" class="btn-1"><i class="fas fa-motorcycle"></i> Solicita un técnico ahora</a>
+                <div class="service-card-actions">
+                    <a href="cerrajeria.html" class="btn-2"><i class="fas fa-arrow-right"></i> Ver cerrajería</a>
+                    <a href="https://wa.me/+573106947033?text=Hola%2C%20necesito%20cerrajer%C3%ADa%20a%20domicilio%20(urgente%20%2F%20cotizaci%C3%B3n)" class="btn-1"><i class="fab fa-whatsapp"></i> Cotizar</a>
+                </div>
             </article>
         </div>
     </section>

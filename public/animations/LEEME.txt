@@ -1,0 +1,6 @@
+Archivos de animación (solo Lottie JSON, texto que empieza con { ):
+
+  puerta-logo.json         → logo del menú
+  puerta-automatismos.json → cortina al entrar a Automatismos
+
+En LottieFiles: Download → "Lottie JSON" (NO dotLottie / .lottie)
