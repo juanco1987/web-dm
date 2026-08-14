@@ -24,13 +24,13 @@ function setWipeVisualMode(mode) {
   }
 }
 
-/** Texto DOORMASTER — puerta SVG (resto de páginas) */
+/** Texto PUERTACCES — puerta SVG (resto de páginas) */
 function resetBrandTextSvg(brandText) {
   if (!brandText) return
   gsap.set(brandText, { opacity: 0, scale: 0.25, y: 180, filter: 'blur(4px)' })
 }
 
-/** Texto DOORMASTER — cortina Lottie (automatismos) */
+/** Texto PUERTACCES — cortina Lottie (automatismos) */
 function resetBrandTextLottie(brandText) {
   if (!brandText) return
   gsap.set(brandText, { opacity: 0, scale: 0.4, y: 90, filter: 'blur(5px)' })
@@ -144,7 +144,7 @@ async function navigateToPage(targetUrl, reinit) {
 }
 
 /**
- * Coreografía GSAP: puerta (SVG o Lottie en automatismos) + DOORMASTER + swap.
+ * Coreografía GSAP: puerta (SVG o Lottie en automatismos) + PUERTACCES + swap.
  */
 function buildDoorTimeline({
   wipe, doorScene, doorPanel, doorLight, brandText, lottieEl,
@@ -186,8 +186,33 @@ function buildDoorTimeline({
   const tl = gsap.timeline()
 
   tl.to(wipe, { y: '0%', duration: 0.7, ease: 'power4.inOut' })
-  tl.to(doorPanel, { rotationY: -82, duration: 1.15, ease: 'power3.inOut' }, '-=0.05')
-  if (doorLight) tl.to(doorLight, { opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.8')
+  
+  // Animación mejorada de la puerta: rotación más dramática + perspectiva
+  tl.to(doorPanel, { 
+    rotationY: -90, 
+    duration: 1.4, 
+    ease: 'power2.inOut',
+  }, '-=0.05')
+  
+  // Animación del borde de sombra de la puerta
+  const doorEdgeShadow = document.querySelector('.door-edge-shadow')
+  if (doorEdgeShadow) {
+    tl.to(doorEdgeShadow, {
+      opacity: 0.4,
+      duration: 1.1,
+      ease: 'sine.inOut',
+    }, '-=1.3')
+  }
+  
+  // Luz ambiental se intensifica mientras la puerta se abre (más dramática)
+  if (doorLight) {
+    tl.to(doorLight, { 
+      opacity: 1, 
+      duration: 1.2, 
+      ease: 'power2.out' 
+    }, '-=1.2')
+  }
+  
   revealBrandText(tl, brandText)
   appendWipeExit(tl, {
     wipe, doorScene, brandText, doorPanel, doorLight, lottieWrap,
@@ -354,8 +379,35 @@ export function runInitialWipe() {
     resetBrandTextSvg(brandText)
     gsap.set(doorPanel, { rotationY: 0, opacity: 1, scale: 1 })
     if (doorLight) gsap.set(doorLight, { opacity: 0 })
-    tl.to(doorPanel, { rotationY: -82, duration: 1.15, ease: 'power3.inOut' })
-    if (doorLight) tl.to(doorLight, { opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.8')
+    
+    const doorEdgeShadow = document.querySelector('.door-edge-shadow')
+    if (doorEdgeShadow) gsap.set(doorEdgeShadow, { opacity: 0 })
+    
+    // Animación mejorada de la puerta al salir
+    tl.to(doorPanel, { 
+      rotationY: -90, 
+      duration: 1.4, 
+      ease: 'power2.inOut' 
+    })
+    
+    // Sombra del borde se anima
+    if (doorEdgeShadow) {
+      tl.to(doorEdgeShadow, {
+        opacity: 0.4,
+        duration: 1.1,
+        ease: 'sine.inOut',
+      }, '-=1.3')
+    }
+    
+    // Luz se intensifica dramáticamente
+    if (doorLight) {
+      tl.to(doorLight, { 
+        opacity: 1, 
+        duration: 1.2, 
+        ease: 'power2.out' 
+      }, '-=1.2')
+    }
+    
     revealBrandText(tl, brandText)
     tl.to([doorPanel, brandText, doorLight].filter(Boolean), {
       opacity: 0, scale: 0.94, duration: 0.4, ease: 'power2.in', delay: 0.45,

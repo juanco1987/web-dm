@@ -39,12 +39,12 @@ function revealLetters(logo, letters) {
 
 function startLetterFallback(logo, _iconWrap, letters, reason) {
   if (logo.dataset.logoAnimated === '1') return
-  if (reason) console.warn('[DoorMaster]', reason)
+  if (reason) console.warn('[Puertacces]', reason)
   revealLetters(logo, letters)
 }
 
 /**
- * Logo: Lottie de puerta → letras DOORMASTER. Si falla Lottie, igual se muestra el título.
+ * Logo: Lottie de puerta → letras PUERTACCES. Si falla Lottie, igual se muestra el título.
  */
 export function initLogoAnimation() {
   const logo = document.querySelector(SELECTORS.logo)

@@ -1,5 +1,5 @@
 /**
- * main.js — Orquestador de la aplicación DoorMaster
+ * main.js — Orquestador de la aplicación Puertacces
  *
  * Importa todos los módulos, define el estado de la app y coordina
  * el ciclo inicialización → teardown → reinicialización (SPA).
