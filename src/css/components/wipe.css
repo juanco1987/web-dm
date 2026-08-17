@@ -1,6 +1,10 @@
 /* ---- Cortina de transición ---- */
 .page-transition-wipe {
     will-change: transform;
+    background-image: url('/LOGOTIPOS DE DOORMASTER/LOGO4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .transition-door-scene {
