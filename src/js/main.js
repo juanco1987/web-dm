@@ -1,5 +1,5 @@
 /**
- * main.js — Orquestador de la aplicación Puertacces
+ * main.js — Orquestador de la aplicación PuertAcces
  *
  * Importa todos los módulos, define el estado de la app y coordina
  * el ciclo inicialización → teardown → reinicialización (SPA).

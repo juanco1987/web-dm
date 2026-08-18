@@ -1,0 +1,86 @@
+/* =========================================
+   mobile-bar.css — Barra de Acción Rápida Fija (Móvil)
+   ========================================= */
+
+.mobile-action-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 64px;
+    background: rgba(2, 12, 27, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.6);
+    z-index: 998;
+    padding: 8px 14px;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mobile-bar-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 1.45rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-bar-btn:active {
+    transform: scale(0.97);
+}
+
+.mobile-bar-btn--call {
+    background: linear-gradient(135deg, #e53e3e 0%, #dd6b20 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(229, 62, 62, 0.4);
+}
+
+.mobile-bar-btn--call i {
+    font-size: 1.6rem;
+    animation: phonePulse 2s infinite ease-in-out;
+}
+
+.mobile-bar-btn--wa {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+}
+
+.mobile-bar-btn--wa i {
+    font-size: 1.9rem;
+}
+
+@keyframes phonePulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    15% { transform: scale(1.15) rotate(-12deg); }
+    30% { transform: scale(1.15) rotate(12deg); }
+    45% { transform: scale(1) rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+    .mobile-action-bar {
+        display: flex;
+    }
+
+    body {
+        padding-bottom: 64px;
+    }
+
+    .whatsapp-float {
+        bottom: 80px !important;
+        right: 16px !important;
+    }
+}

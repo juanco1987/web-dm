@@ -26,32 +26,6 @@ function htmlIncludePlugin() {
   }
 }
 
-/**
- * Vite 8 + Rolldown: no se puede mutar `bundle[foo]`.
- * Los HTML multipágina salen como dist/src/pages/*.html; los movemos al root de dist.
- */
-function flattenHtmlOutputPlugin() {
-  let outDir = 'dist'
-  return {
-    name: 'vite-flatten-html-output',
-    enforce: 'post',
-    configResolved(config) {
-      outDir = path.resolve(config.root, config.build.outDir)
-    },
-    closeBundle() {
-      const pagesDir = path.join(outDir, 'src', 'pages')
-      if (!fs.existsSync(pagesDir)) return
-      for (const name of fs.readdirSync(pagesDir)) {
-        if (!name.endsWith('.html')) continue
-        const from = path.join(pagesDir, name)
-        const to = path.join(outDir, name)
-        fs.renameSync(from, to)
-      }
-      fs.rmSync(path.join(outDir, 'src'), { recursive: true, force: true })
-    }
-  }
-}
-
 export default defineConfig({
   root: '.',
   publicDir: 'public',
@@ -61,15 +35,16 @@ export default defineConfig({
     emptyOutDir: true,
     rolldownOptions: {
       input: {
-        index: path.resolve(__dirname, 'src/pages/index.html'),
-        automatismos: path.resolve(__dirname, 'src/pages/automatismos.html'),
-        mantenimientos: path.resolve(__dirname, 'src/pages/mantenimientos.html'),
-        cerrajeria: path.resolve(__dirname, 'src/pages/cerrajeria.html'),
+        index: path.resolve(__dirname, 'index.html'),
+        automatismos: path.resolve(__dirname, 'automatismos.html'),
+        mantenimientos: path.resolve(__dirname, 'mantenimientos.html'),
+        cerrajeria: path.resolve(__dirname, 'cerrajeria.html'),
       }
     }
   },
   server: {
-    open: '/src/pages/index.html'
+    port: 5173,
+    open: '/'
   },
-  plugins: [htmlIncludePlugin(), flattenHtmlOutputPlugin()]
+  plugins: [htmlIncludePlugin()]
 })

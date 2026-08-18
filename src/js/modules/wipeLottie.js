@@ -74,7 +74,7 @@ export function playWipeLottie(container, waitUntil = 'complete') {
 
       _wipeLottie.addEventListener('error', () => {
         clearTimeout(timeout)
-        console.warn('[Puertacces] Error cargando', LOTTIE_WIPE_AUTOMATISMOS)
+        console.warn('[PuertAcces] Error cargando', LOTTIE_WIPE_AUTOMATISMOS)
         _resolveComplete?.()
         _resolveComplete = null
         finish()
@@ -105,7 +105,7 @@ export function playWipeLottie(container, waitUntil = 'complete') {
       })
     } catch (err) {
       clearTimeout(timeout)
-      console.warn('[Puertacces]', err)
+      console.warn('[PuertAcces]', err)
       _resolveComplete?.()
       _resolveComplete = null
       finish()

@@ -1,6 +1,6 @@
-# 🗺️ ROADMAP DE INNOVACIÓN Y POSICIONAMIENTO WEB — PUERTACCES
+# 🗺️ ROADMAP DE INNOVACIÓN Y POSICIONAMIENTO WEB — DOORMASTER
 
-Este documento sirve como la **bitácora de control de calidad, desarrollo y SEO** para transformar la presencia digital de Puertacces en una experiencia interactiva de nivel internacional (Awwwards / Apple), diseñada para capturar clientes de alto valor y posicionarse de forma orgánica y autónoma en Bogotá.
+Este documento sirve como la **bitácora de control de calidad, desarrollo y SEO** para transformar la presencia digital de Doormaster en una experiencia interactiva de nivel internacional (Awwwards / Apple), diseñada para capturar clientes de alto valor y posicionarse de forma orgánica y autónoma en Bogotá.
 
 ---
 
@@ -19,7 +19,7 @@ Este documento sirve como la **bitácora de control de calidad, desarrollo y SEO
 - [x] **Compresión y Conversión WebP:** Reducción del tamaño del sitio de >130MB a ~3MB convirtiendo todas las imágenes y optimizando videos.
 - [x] **Unificación de Enlaces:** Reparación de enlaces y botones de contacto rotos (`#` a flujos reales de WhatsApp).
 - [x] **SEO Local Bogotá:** Metatítulos descriptivos y meta-descripciones enriquecidas con palabras clave clave para Bogotá.
-- [x] **Esquemas Estructurados (Schema.org):** Inyección de JSON-LD LocalBusiness para que Google indexe los teléfonos, servicios y dirección física de Puertacces directamente en los resultados de búsqueda.
+- [x] **Esquemas Estructurados (Schema.org):** Inyección de JSON-LD LocalBusiness para que Google indexe los teléfonos, servicios y dirección física de Doormaster directamente en los resultados de búsqueda.
 - [x] **Open Graph (OG) Tags:** Optimización para compartidos en redes sociales (WhatsApp, Facebook, Instagram) mostrando imagen corporativa premium.
 - [ ] **Purga de CSS Inactivo:** Remover estilos CSS no utilizados con PurgeCSS para reducir al mínimo el tiempo de descarga (Falta por correr en build final).
 
@@ -53,7 +53,7 @@ Este documento sirve como la **bitácora de control de calidad, desarrollo y SEO
 ### 🟢 FASE 5: Experiencia de Aplicación Nativa (100% Completado)
 > Eliminar el parpadeo blanco del navegador para lograr una navegación completamente mágica.
 - [x] **Zero-Reload Navigation Illusion:** Implementación de interceptor de navegación local por JavaScript que previene el salto brusco clásico y sincroniza las cargas con GSAP.
-- [x] **Cortina Digital Puertacces:** Creación de cortina digital con logotipo animado y barra de carga síncrona que barre la pantalla a 60fps ocultando la carga física del HTML.
+- [x] **Cortina Digital Doormaster:** Creación de cortina digital con logotipo animado y barra de carga síncrona que barre la pantalla a 60fps ocultando la carga física del HTML.
 - [x] **Contextual Locksmith Scene (Premium):** Escena animada personalizada con vectores SVG donde una llave física de alta tecnología entra y gira dinámicamente en el cerrojo para desbloquear la entrada de la sección de Cerrajería.
 
 ---

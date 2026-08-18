@@ -6,15 +6,15 @@ export const WA_MAGNETIC_RADIUS   = 150
 export const WA_MAGNETIC_STRENGTH = 0.35
 
 /** Delay en ms antes de activar la animación split-words (sincronía con cortina) */
-export const SPLIT_WORDS_DELAY = 750
+export const SPLIT_WORDS_DELAY = 150
 
 /** Duración del scroll líquido Lenis */
-export const LENIS_DURATION = 1.2
+export const LENIS_DURATION = 1.0
 
 /** Scroll reveal — tarjetas y títulos (más alto = aparecen antes al bajar) */
 export const SCROLL_REVEAL_START   = 'top 94%'
-export const SCROLL_CARD_DURATION  = 0.72
-export const SCROLL_TITLE_DURATION = 0.85
+export const SCROLL_CARD_DURATION  = 0.5
+export const SCROLL_TITLE_DURATION = 0.6
 
 /** Animación Lottie del logo (archivo en public/animations/) */
 export const LOTTIE_LOGO_PATH = '/animations/puerta-logo.json'
@@ -23,9 +23,9 @@ export const LOTTIE_LOGO_PATH = '/animations/puerta-logo.json'
 export const LOTTIE_WIPE_AUTOMATISMOS = '/animations/puerta-automatismos.json'
 
 /** Sincronía cortina automatismos (ajustar si el texto adelanta a las puertas) */
-export const LOTTIE_WIPE_PLAYBACK_SPEED = 1.4
-export const LOTTIE_WIPE_DOORS_AT       = 0.52
-export const LOTTIE_WIPE_MIN_DOORS_MS   = 900
+export const LOTTIE_WIPE_PLAYBACK_SPEED = 2.4
+export const LOTTIE_WIPE_DOORS_AT       = 0.45
+export const LOTTIE_WIPE_MIN_DOORS_MS   = 350
 
 /** Selectores CSS usados por múltiples módulos */
 export const SELECTORS = {
@@ -41,11 +41,11 @@ export const SELECTORS = {
   hero:            '.header',
   headerContent:   '.header-content',
 
-  grids:           '.services-grid, .benefits-grid, .features-container, .coverage-grid, .video-cards-container, .services-container',
-  sectionTitles:   '.main-services h2, .why-choose-us h2, .projects-showcase h2, .gallery-section h2, .why-choose-us h3, .services-section h2',
-  revealSections:  '.project-category, .cta-section',
+  grids:           '.services-grid, .benefits-grid, .features-container, .coverage-grid, .video-cards-container, .services-container, .reviews-grid, .trust-stats-grid',
+  sectionTitles:   '.main-services h2, .why-choose-us h2, .projects-showcase h2, .gallery-section h2, .why-choose-us h3, .services-section h2, .reviews-section h2, .faq-section h2',
+  revealSections:  '.project-category, .cta-section, .faq-section, .reviews-section',
 
-  cards3d:         '.service-card, .benefit-card, .feature-box, .video-card',
+  cards3d:         '.service-card, .benefit-card, .feature-box, .video-card, .review-card, .trust-stat-box',
   splitTitles:     '.animate-fade-in, .header-content h1',
 
   waButton:        '.whatsapp-float',

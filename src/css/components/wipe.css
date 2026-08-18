@@ -1,10 +1,6 @@
 /* ---- Cortina de transición ---- */
 .page-transition-wipe {
     will-change: transform;
-    background-image: url('/LOGOTIPOS DE DOORMASTER/LOGO4.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .transition-door-scene {
@@ -23,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: min(92vw, 320px);
+    width: min(92vw, 300px);
     max-height: 90vh;
 }
 
@@ -51,29 +47,9 @@
 .door-wrapper {
     position: relative;
     width: 100%;
-    height: clamp(280px, 50vh, 400px);
+    height: clamp(240px, 42vh, 340px);
     flex-shrink: 0;
-    perspective: 1500px;
-}
-
-/* ---- Panel de puerta con sombra de borde ---- */
-.door-panel {
-    position: absolute;
-    will-change: transform;
-}
-
-.door-edge-shadow {
-    position: absolute;
-    left: -2px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(90deg, 
-        rgba(0,0,0,0.8) 0%, 
-        rgba(0,0,0,0.3) 50%,
-        transparent 100%);
-    opacity: 0;
-    will-change: opacity;
+    perspective: 700px;
 }
 
 .door-lottie-wrap {
@@ -95,47 +71,6 @@
 .door-wipe-lottie svg {
     width: 100% !important;
     height: 100% !important;
-}
-
-/* ---- Animación de brillo dinámico ---- */
-@keyframes doorShine {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-}
-
-/* ---- Animación de borde de sombra ---- */
-@keyframes doorEdgeShadow {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 0.3;
-    }
-    80% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* ---- Animación de luz ambiental ---- */
-@keyframes doorGlowPulse {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.8;
-    }
 }
 
 /* ---- Orbes de luz ambiental ---- */

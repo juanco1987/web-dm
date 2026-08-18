@@ -1,8 +1,18 @@
 /* ---- Headers de automatismos y mantenimientos ---- */
-.automatismos-page .header,
+.automatismos-page .header {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.92)),
+                url('/LOGOTIPOS DE DOORMASTER/mmotor-levad.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
 .mantenimientos-page .header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-                url('/LOGOTIPOS DE DOORMASTER/LOGO4.png');
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.92)),
+                url('/LOGOTIPOS DE DOORMASTER/puerta-de-vidrio.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

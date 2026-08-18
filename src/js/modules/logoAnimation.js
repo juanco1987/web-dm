@@ -39,7 +39,7 @@ function revealLetters(logo, letters) {
 
 function startLetterFallback(logo, _iconWrap, letters, reason) {
   if (logo.dataset.logoAnimated === '1') return
-  if (reason) console.warn('[Puertacces]', reason)
+  if (reason) console.warn('[PuertAcces]', reason)
   revealLetters(logo, letters)
 }
 

@@ -1,0 +1,6 @@
+# robots.txt para PuertAcces
+User-agent: *
+Allow: /
+
+# Sitemap oficial
+Sitemap: https://puertacces.com/sitemap.xml

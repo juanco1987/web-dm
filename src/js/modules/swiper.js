@@ -16,7 +16,8 @@ export function initSwipers() {
   const instances = []
 
   // --- Cerrajería: carrusel coverflow de productos ---
-  if (document.querySelector(SELECTORS.swiperCerrajeria)) {
+  const cerrajeriaEl = document.querySelector(SELECTORS.swiperCerrajeria)
+  if (cerrajeriaEl) {
     const sw = new Swiper(SELECTORS.swiperCerrajeria, {
       modules: [EffectCoverflow, Autoplay],
       effect: 'coverflow',
@@ -35,6 +36,24 @@ export function initSwipers() {
         disableOnInteraction: false,
       }
     })
+
+    // Activar clics en todas las flechas dentro de las tarjetas
+    cerrajeriaEl.querySelectorAll('.fa-circle-arrow-left').forEach(arrow => {
+      arrow.addEventListener('click', (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        sw.slidePrev()
+      })
+    })
+
+    cerrajeriaEl.querySelectorAll('.fa-circle-arrow-right').forEach(arrow => {
+      arrow.addEventListener('click', (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        sw.slideNext()
+      })
+    })
+
     instances.push(sw)
   }
 

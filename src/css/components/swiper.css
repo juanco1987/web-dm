@@ -2,21 +2,17 @@
 .swiper {
     width: 100%;
     padding: 15rem 0 5rem;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                      url('LOGOTIPOS DE DOORMASTER/LOGO4.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: radial-gradient(circle at center, rgba(16, 28, 48, 0.95), rgba(2, 12, 27, 0.98));
     position: relative;
 }
 
 .swiper-slide {
     width: 450px;
     height: 500px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('LOGOTIPOS DE DOORMASTER/LOGO3.webp');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: var(--box-shadow-standard);
     padding: var(--spacing-lg);
     text-align: center;
@@ -40,8 +36,18 @@
     z-index: 1;
 }
 
-.icons i   { font-size: var(--font-size-lg); color: #f8e74e; }
-.icons img { width: 120px; height: auto; }
+.icons i {
+    font-size: var(--font-size-xl);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    user-select: none;
+}
+
+.icons i:hover {
+    transform: scale(1.25);
+    color: #ffffff;
+}
 
 .product-content {
     display: flex;

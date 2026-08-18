@@ -27,27 +27,26 @@ function setWipeVisualMode(mode) {
 /** Texto PUERTACCES — puerta SVG (resto de páginas) */
 function resetBrandTextSvg(brandText) {
   if (!brandText) return
-  gsap.set(brandText, { opacity: 0, scale: 0.25, y: 180, filter: 'blur(4px)' })
+  gsap.set(brandText, { opacity: 0, scale: 0.7, y: 30, filter: 'blur(2px)' })
 }
 
 /** Texto PUERTACCES — cortina Lottie (automatismos) */
 function resetBrandTextLottie(brandText) {
   if (!brandText) return
-  gsap.set(brandText, { opacity: 0, scale: 0.4, y: 90, filter: 'blur(5px)' })
+  gsap.set(brandText, { opacity: 0, scale: 0.7, y: 30, filter: 'blur(2px)' })
 }
 
-function revealBrandText(tl, brandText, position = '<+=0.42') {
+function revealBrandText(tl, brandText, position = '<+=0.1') {
   tl.to(brandText, {
     opacity: 1, scale: 1, y: 0, filter: 'blur(0px)',
-    duration: 0.85, ease: 'power2.out',
+    duration: 0.32, ease: 'power2.out',
   }, position)
 }
 
-/** Texto más lento para no adelantarse a las puertas Lottie */
-function revealBrandTextLottie(tl, brandText, position = '+=0.55') {
+function revealBrandTextLottie(tl, brandText, position = '<+=0.1') {
   tl.to(brandText, {
     opacity: 1, scale: 1, y: 0, filter: 'blur(0px)',
-    duration: 1.2, ease: 'power1.out',
+    duration: 0.32, ease: 'power2.out',
   }, position)
 }
 
@@ -124,6 +123,7 @@ async function navigateToPage(targetUrl, reinit) {
     return
   }
 
+  wipe.style.display = 'flex'
   wipe.style.pointerEvents = 'all'
 
   const pageFetch = fetch(targetUrl)
@@ -144,21 +144,21 @@ async function navigateToPage(targetUrl, reinit) {
 }
 
 /**
- * Coreografía GSAP: puerta (SVG o Lottie en automatismos) + PUERTACCES + swap.
+ * Coreografía GSAP: puerta (SVG o Lottie en automatismos) + DOORMASTER + swap.
  */
 function buildDoorTimeline({
   wipe, doorScene, doorPanel, doorLight, brandText, lottieEl,
   pageFetch, targetUrl, reinit, useLottie,
 }) {
   if (!doorScene) {
-    // Fallback mínimo si falta la escena
     const tl = gsap.timeline()
-    tl.to(wipe, { y: '0%', duration: 0.8, ease: 'power4.inOut' })
+    tl.to(wipe, { y: '0%', duration: 0.32, ease: 'power3.inOut' })
     tl.add(async () => { const html = await pageFetch; if (html) performDOMSwap(html, targetUrl, reinit) })
     tl.to(wipe, {
-      y: '-100%', duration: 1.1, ease: 'power4.inOut',
+      y: '-100%', duration: 0.35, ease: 'power3.inOut',
       onComplete: () => {
         wipe.style.pointerEvents = 'none'
+        wipe.style.display = 'none'
         requestAnimationFrame(() => initLogoAnimation())
       },
     })
@@ -185,34 +185,9 @@ function buildDoorTimeline({
 
   const tl = gsap.timeline()
 
-  tl.to(wipe, { y: '0%', duration: 0.7, ease: 'power4.inOut' })
-  
-  // Animación mejorada de la puerta: rotación más dramática + perspectiva
-  tl.to(doorPanel, { 
-    rotationY: -90, 
-    duration: 1.4, 
-    ease: 'power2.inOut',
-  }, '-=0.05')
-  
-  // Animación del borde de sombra de la puerta
-  const doorEdgeShadow = document.querySelector('.door-edge-shadow')
-  if (doorEdgeShadow) {
-    tl.to(doorEdgeShadow, {
-      opacity: 0.4,
-      duration: 1.1,
-      ease: 'sine.inOut',
-    }, '-=1.3')
-  }
-  
-  // Luz ambiental se intensifica mientras la puerta se abre (más dramática)
-  if (doorLight) {
-    tl.to(doorLight, { 
-      opacity: 1, 
-      duration: 1.2, 
-      ease: 'power2.out' 
-    }, '-=1.2')
-  }
-  
+  tl.to(wipe, { y: '0%', duration: 0.32, ease: 'power3.inOut' })
+  tl.to(doorPanel, { rotationY: -82, duration: 0.42, ease: 'power2.inOut' }, '-=0.05')
+  if (doorLight) tl.to(doorLight, { opacity: 1, duration: 0.3, ease: 'power2.out' }, '-=0.25')
   revealBrandText(tl, brandText)
   appendWipeExit(tl, {
     wipe, doorScene, brandText, doorPanel, doorLight, lottieWrap,
@@ -230,12 +205,12 @@ function buildLottieWipeTimeline({ wipe, doorScene, brandText, lottieWrap, pageF
 
   const tl = gsap.timeline()
 
-  tl.to(wipe, { y: '0%', duration: 0.7, ease: 'power4.inOut' })
+  tl.to(wipe, { y: '0%', duration: 0.32, ease: 'power3.inOut' })
   tl.add(() => {
     const container = document.querySelector(SELECTORS.doorWipeLottie)
     return container ? playWipeLottie(container, 'doorsOpening') : Promise.resolve()
   })
-  revealBrandTextLottie(tl, brandText, '+=0.35')
+  revealBrandTextLottie(tl, brandText, '<+=0.05')
   appendWipeExit(tl, {
     wipe, doorScene, brandText, lottieWrap,
     pageFetch, targetUrl, reinit, useLottie: true,
@@ -244,12 +219,13 @@ function buildLottieWipeTimeline({ wipe, doorScene, brandText, lottieWrap, pageF
 
 function buildMinimalWipeTimeline(wipe, pageFetch, targetUrl, reinit) {
   const tl = gsap.timeline()
-  tl.to(wipe, { y: '0%', duration: 0.8, ease: 'power4.inOut' })
+  tl.to(wipe, { y: '0%', duration: 0.32, ease: 'power3.inOut' })
   tl.add(async () => { const html = await pageFetch; if (html) performDOMSwap(html, targetUrl, reinit) })
   tl.to(wipe, {
-    y: '-100%', duration: 1.1, ease: 'power4.inOut',
+    y: '-100%', duration: 0.35, ease: 'power3.inOut',
     onComplete: () => {
       wipe.style.pointerEvents = 'none'
+      wipe.style.display = 'none'
       setWipeVisualMode('svg')
       requestAnimationFrame(() => initLogoAnimation())
     },
@@ -272,13 +248,14 @@ function appendWipeExit(tl, {
     tl.add(() => waitWipeLottieComplete())
   }
   tl.to(fadeTargets, {
-    opacity: 0, scale: 0.94, duration: useLottie ? 0.28 : 0.35, ease: 'power2.in',
-    delay: useLottie ? 0.15 : 0.28,
+    opacity: 0, scale: 0.96, duration: 0.16, ease: 'power2.in',
+    delay: 0.05,
   })
   tl.to(wipe, {
-    y: '-100%', duration: useLottie ? 0.82 : 1.05, ease: 'power4.inOut',
+    y: '-100%', duration: 0.36, ease: 'power3.inOut',
     onComplete: () => {
       wipe.style.pointerEvents = 'none'
+      wipe.style.display = 'none'
       doorScene.style.display = 'none'
       setWipeVisualMode('svg')
       if (brandText) gsap.set(brandText, { opacity: 1, scale: 1, y: 0, filter: 'none' })
@@ -329,102 +306,16 @@ function resetLogoForAnimation() {
 }
 
 /**
- * Coreografía de entrada en la carga inicial de la página (no SPA).
- * Muestra la puerta abriéndose y luego revela el contenido.
+ * Inicialización inmediata en la carga de la página (First Paint instantáneo).
+ * Permite al usuario interactuar de inmediato sin bloqueo de 3 segundos.
+ * La transición animada de cortina se reserva para la navegación SPA entre páginas.
  */
 export function runInitialWipe() {
-  const wipe      = document.querySelector(SELECTORS.wipe)
-  if (!wipe) return
-
-  const doorScene = document.querySelector(SELECTORS.doorScene)
-  const doorPanel = document.querySelector(SELECTORS.doorPanel)
-  const doorLight = document.querySelector(SELECTORS.doorLight)
-  const brandText = document.querySelector(SELECTORS.doorBrandText)
-
-  const lottieWrap = document.querySelector(SELECTORS.doorVisualLottie)
-  const useLottie  = isAutomatismosPage(window.location.pathname)
-
-  if (!doorScene) {
-    gsap.to(wipe, {
-      y: '-100%', duration: 1.1, ease: 'power4.inOut', delay: 0.3,
-      onComplete: () => {
-        wipe.style.pointerEvents = 'none'
-        requestAnimationFrame(() => initLogoAnimation())
-      },
-    })
-    return
+  const wipe = document.querySelector(SELECTORS.wipe)
+  if (wipe) {
+    wipe.style.pointerEvents = 'none'
+    wipe.style.display = 'none'
+    gsap.set(wipe, { y: '100%' })
   }
-
-  gsap.set(wipe, { y: '0%' })
-  doorScene.style.display = 'flex'
-  wipe.style.pointerEvents = 'all'
-
-  const tl = gsap.timeline({ delay: 0.25 })
-
-  if (useLottie) {
-    setWipeVisualMode('lottie')
-    resetBrandTextLottie(brandText)
-    if (lottieWrap) gsap.set(lottieWrap, { opacity: 1, scale: 1 })
-    tl.add(() => {
-      const container = document.querySelector(SELECTORS.doorWipeLottie)
-      return container ? playWipeLottie(container, 'doorsOpening') : Promise.resolve()
-    })
-    revealBrandTextLottie(tl, brandText, '+=0.35')
-    tl.add(() => waitWipeLottieComplete())
-    tl.to([brandText, lottieWrap].filter(Boolean), {
-      opacity: 0, scale: 0.94, duration: 0.28, ease: 'power2.in', delay: 0.15,
-    })
-  } else if (doorPanel) {
-    setWipeVisualMode('svg')
-    resetBrandTextSvg(brandText)
-    gsap.set(doorPanel, { rotationY: 0, opacity: 1, scale: 1 })
-    if (doorLight) gsap.set(doorLight, { opacity: 0 })
-    
-    const doorEdgeShadow = document.querySelector('.door-edge-shadow')
-    if (doorEdgeShadow) gsap.set(doorEdgeShadow, { opacity: 0 })
-    
-    // Animación mejorada de la puerta al salir
-    tl.to(doorPanel, { 
-      rotationY: -90, 
-      duration: 1.4, 
-      ease: 'power2.inOut' 
-    })
-    
-    // Sombra del borde se anima
-    if (doorEdgeShadow) {
-      tl.to(doorEdgeShadow, {
-        opacity: 0.4,
-        duration: 1.1,
-        ease: 'sine.inOut',
-      }, '-=1.3')
-    }
-    
-    // Luz se intensifica dramáticamente
-    if (doorLight) {
-      tl.to(doorLight, { 
-        opacity: 1, 
-        duration: 1.2, 
-        ease: 'power2.out' 
-      }, '-=1.2')
-    }
-    
-    revealBrandText(tl, brandText)
-    tl.to([doorPanel, brandText, doorLight].filter(Boolean), {
-      opacity: 0, scale: 0.94, duration: 0.4, ease: 'power2.in', delay: 0.45,
-    })
-  }
-
-  tl.to(wipe, {
-    y: '-100%',
-    duration: useLottie ? 0.82 : 1.1,
-    ease: 'power4.inOut',
-    onComplete: () => {
-      wipe.style.pointerEvents = 'none'
-      doorScene.style.display = 'none'
-      setWipeVisualMode('svg')
-      if (brandText) gsap.set(brandText, { opacity: 1, scale: 1, y: 0, filter: 'none' })
-      if (doorPanel) gsap.set(doorPanel, { opacity: 1, scale: 1, rotationY: 0 })
-      requestAnimationFrame(() => initLogoAnimation())
-    },
-  })
+  requestAnimationFrame(() => initLogoAnimation())
 }
