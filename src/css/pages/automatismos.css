@@ -270,8 +270,8 @@
 .automatismos-page .cta-section,
 .mantenimientos-page .cta-section {
     padding: var(--spacing-xl) 0;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-                url('/LOGOTIPOS DE DOORMASTER/cta-bg.webp');
+    background: linear-gradient(rgba(2,12,27,0.88), rgba(10,25,47,0.92)),
+                url('/LOGOTIPOS DE DOORMASTER/mmotor-levad.webp');
     background-size: cover;
     background-position: center;
     text-align: center;

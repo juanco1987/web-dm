@@ -1,7 +1,7 @@
 /* ---- Wrapper del header (imagen de fondo base) ---- */
 .header {
     background: linear-gradient(rgba(2, 12, 27, 0.82), rgba(10, 25, 47, 0.75)),
-                url('/LOGOTIPOS DE DOORMASTER/LOGO4.png');
+                url('/LOGOTIPOS DE DOORMASTER/LOGO4.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
