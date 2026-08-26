@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-.door-master-container {
+.door-scene-container {
     position: relative;
     display: flex;
     flex-direction: column;

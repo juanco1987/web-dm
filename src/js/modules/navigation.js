@@ -144,7 +144,7 @@ async function navigateToPage(targetUrl, reinit) {
 }
 
 /**
- * Coreografía GSAP: puerta (SVG o Lottie en automatismos) + DOORMASTER + swap.
+ * Coreografía GSAP: puerta (SVG o Lottie en automatismos) + PuertAcces + swap.
  */
 function buildDoorTimeline({
   wipe, doorScene, doorPanel, doorLight, brandText, lottieEl,

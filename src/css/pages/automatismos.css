@@ -1,7 +1,7 @@
 /* ---- Headers de automatismos y mantenimientos ---- */
 .automatismos-page .header {
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.92)),
-                url('/LOGOTIPOS DE DOORMASTER/mmotor-levad.webp');
+                url('/images/mmotor-levad.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,7 @@
 
 .mantenimientos-page .header {
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.92)),
-                url('/LOGOTIPOS DE DOORMASTER/puerta-de-vidrio.webp');
+                url('/images/puerta-de-vidrio.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -271,7 +271,7 @@
 .mantenimientos-page .cta-section {
     padding: var(--spacing-xl) 0;
     background: linear-gradient(rgba(2,12,27,0.88), rgba(10,25,47,0.92)),
-                url('/LOGOTIPOS DE DOORMASTER/mmotor-levad.webp');
+                url('/images/mmotor-levad.webp');
     background-size: cover;
     background-position: center;
     text-align: center;

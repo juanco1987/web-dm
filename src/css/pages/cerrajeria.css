@@ -8,5 +8,5 @@
 /* Fondo específico del header de cerrajería */
 .cerrajeria-page .header {
     background: linear-gradient(rgba(2,12,27,0.7), rgba(10,25,47,0.8)),
-                url('/LOGOTIPOS DE DOORMASTER/cerradura-2.webp') center/cover no-repeat;
+                url('/images/cerradura-2.webp') center/cover no-repeat;
 }

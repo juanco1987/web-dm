@@ -1,7 +1,7 @@
 /**
  * copy-assets.js
  *
- * Las carpetas de medios (LOGOTIPOS DE DOORMASTER, images) están en public/.
+ * Las carpetas de medios (LOGOTIPOS DE PuertAcces, images) están en public/.
  * Vite las copia automáticamente a dist/ durante el build, por lo que
  * este script ya no necesita manejarlas.
  *
