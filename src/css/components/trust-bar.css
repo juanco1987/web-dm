@@ -1,0 +1,221 @@
+/* =======================================================
+   trust-bar.css — Métodos de Pago y Muro de Marcas Oficiales
+   ======================================================= */
+
+/* --- 1. BARRA DE MÉTODOS DE PAGO --- */
+.payment-methods-strip {
+    background: linear-gradient(180deg, rgba(2, 12, 27, 0.95) 0%, rgba(10, 25, 47, 0.95) 100%);
+    border-top: 1px solid rgba(100, 255, 218, 0.15);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.15);
+    padding: var(--spacing-md) 0;
+    position: relative;
+    z-index: 5;
+}
+
+.payment-strip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.payment-strip-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.payment-strip-icon {
+    width: 4.4rem;
+    height: 4.4rem;
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.payment-strip-text h3 {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin: 0;
+    font-weight: 700;
+}
+
+.payment-strip-text p {
+    font-size: 1.35rem;
+    color: #a8b2d1;
+    margin: 0.2rem 0 0 0;
+}
+
+.payment-badges-grid {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.payment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    transition: var(--transition-fast);
+    font-size: 1.35rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.payment-badge:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.payment-badge--nequi {
+    border-color: rgba(255, 0, 122, 0.3);
+    background: rgba(32, 0, 60, 0.4);
+}
+.payment-badge--nequi i {
+    color: #FF007A;
+}
+
+.payment-badge--daviplata {
+    border-color: rgba(237, 28, 36, 0.3);
+    background: rgba(237, 28, 36, 0.08);
+}
+.payment-badge--daviplata i {
+    color: #ED1C24;
+}
+
+.payment-badge--breb {
+    border-color: rgba(0, 208, 132, 0.35);
+    background: rgba(0, 208, 132, 0.08);
+}
+.payment-badge--breb .breb-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00D084;
+    box-shadow: 0 0 8px #00D084;
+    display: inline-block;
+}
+
+.payment-badge--cash {
+    border-color: rgba(255, 215, 0, 0.3);
+    background: rgba(255, 215, 0, 0.08);
+}
+.payment-badge--cash i {
+    color: #ffd700;
+}
+
+/* --- 2. MURO DE MARCAS OFICIALES --- */
+.brands-section {
+    padding: var(--spacing-lg) 0;
+    background: var(--dark-bg);
+    position: relative;
+}
+
+.brands-header {
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto var(--spacing-md) auto;
+}
+
+.brands-eyebrow {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.brands-title {
+    font-size: var(--font-size-xl);
+    color: var(--text-light);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.brands-subtitle {
+    font-size: 1.5rem;
+    color: #a8b2d1;
+    margin: 0 auto;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.6rem;
+    margin-top: var(--spacing-md);
+}
+
+.brand-card {
+    background: rgba(10, 25, 47, 0.6);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    border-radius: var(--border-radius-standard);
+    padding: 1.8rem 1.4rem;
+    text-align: center;
+    transition: var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(100, 255, 218, 0.4);
+    background: rgba(10, 25, 47, 0.95);
+    box-shadow: 0 8px 25px rgba(2, 12, 27, 0.8);
+}
+
+.brand-name {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.brand-card:hover .brand-name {
+    color: var(--secondary-color);
+}
+
+.brand-role {
+    font-size: 1.25rem;
+    color: #8892b0;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .payment-strip-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .payment-badges-grid {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    .brand-name {
+        font-size: 1.7rem;
+    }
+}

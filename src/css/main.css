@@ -21,6 +21,7 @@
 @import './components/reviews.css';
 @import './components/faq.css';
 @import './components/mobile-bar.css';
+@import './components/trust-bar.css';
 
 /* 4. Estilos por página */
 @import './pages/automatismos.css';
