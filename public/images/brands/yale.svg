@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 55" fill="none">
+  <rect width="160" height="55" rx="10" fill="#111B28"/>
+  <ellipse cx="80" cy="27.5" rx="65" ry="20" fill="#FFB81C"/>
+  <!-- Texto Yale -->
+  <text x="80" y="36" font-family="'Arial Black', 'Impact', sans-serif" font-size="28" font-weight="900" fill="#111B28" text-anchor="middle" font-style="italic" letter-spacing="-1">Yale</text>
+</svg>

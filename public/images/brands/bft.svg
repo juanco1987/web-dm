@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 55" fill="none">
+  <rect width="150" height="55" rx="10" fill="#111B28"/>
+  <!-- Bloque BFT -->
+  <rect x="18" y="14" width="114" height="27" rx="5" fill="#004B93"/>
+  <text x="75" y="34" font-family="'Arial Black', sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">BFT</text>
+</svg>

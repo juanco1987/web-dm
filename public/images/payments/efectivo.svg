@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 40" fill="none">
+  <rect width="130" height="40" rx="8" fill="#143322"/>
+  <!-- Billete de efectivo -->
+  <g transform="translate(14, 11)">
+    <rect x="0" y="0" width="22" height="17" rx="2" stroke="#22c55e" stroke-width="2" fill="none"/>
+    <circle cx="11" cy="8.5" r="3.5" fill="#22c55e"/>
+    <circle cx="3.5" cy="4" r="1" fill="#22c55e"/>
+    <circle cx="18.5" cy="13" r="1" fill="#22c55e"/>
+  </g>
+  <!-- Texto Efectivo -->
+  <text x="44" y="25" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#ffffff">Efectivo</text>
+</svg>

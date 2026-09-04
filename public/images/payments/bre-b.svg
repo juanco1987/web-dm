@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 40" fill="none">
+  <rect width="130" height="40" rx="8" fill="#0A1F33"/>
+  <!-- Simbolo Bre-B (bucles entrelazados) -->
+  <g transform="translate(12, 10)">
+    <circle cx="8" cy="10" r="6" stroke="#00D084" stroke-width="2.5" fill="none"/>
+    <circle cx="14" cy="10" r="6" stroke="#00E5FF" stroke-width="2.5" fill="none"/>
+    <circle cx="11" cy="10" r="2" fill="#00D084"/>
+  </g>
+  <!-- Texto bre-b -->
+  <text x="40" y="26" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="18" font-weight="800" fill="#ffffff" letter-spacing="0.5">bre<tspan fill="#00D084">-</tspan>b</text>
+</svg>

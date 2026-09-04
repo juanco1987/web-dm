@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 55" fill="none">
+  <rect width="170" height="55" rx="10" fill="#111B28"/>
+  <rect x="14" y="14" width="26" height="26" rx="6" fill="#E30613"/>
+  <path d="M22 21h5c2.5 0 4.5 1.8 4.5 4s-2 4-4.5 4h-5v-8z" fill="#ffffff"/>
+  <!-- Texto dormakaba -->
+  <text x="48" y="34" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff" letter-spacing="-0.5">dorma<tspan fill="#E30613">kaba</tspan></text>
+</svg>

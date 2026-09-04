@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 40" fill="none">
+  <rect width="135" height="40" rx="8" fill="#ED1C24"/>
+  <!-- Casita Davivienda / Daviplata -->
+  <path d="M15 22.5L23 14l8 8.5v6.5h-5v-4.5h-6v4.5h-5v-6.5z" fill="#ffffff"/>
+  <!-- Texto DaviPlata -->
+  <text x="37" y="26" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="-0.3">DaviPlata</text>
+</svg>

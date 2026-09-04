@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 55" fill="none">
+  <rect width="150" height="55" rx="10" fill="#111B28"/>
+  <ellipse cx="75" cy="27.5" rx="55" ry="18" fill="#E2001A"/>
+  <!-- Texto CISA -->
+  <text x="75" y="35" font-family="'Arial Black', sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">CISA</text>
+</svg>
